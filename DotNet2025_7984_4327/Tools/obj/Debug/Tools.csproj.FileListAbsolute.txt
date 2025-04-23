@@ -1,0 +1,24 @@
+C:\Users\user1\Desktop\FinalProject\DotNet2025_7984_4327\bin\Tools.deps.json
+C:\Users\user1\Desktop\FinalProject\DotNet2025_7984_4327\bin\Tools.dll
+C:\Users\user1\Desktop\FinalProject\DotNet2025_7984_4327\bin\Tools.pdb
+C:\Users\user1\Desktop\FinalProject\DotNet2025_7984_4327\Tools\obj\Debug\Tools.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\FinalProject\DotNet2025_7984_4327\Tools\obj\Debug\Tools.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\FinalProject\DotNet2025_7984_4327\Tools\obj\Debug\Tools.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\FinalProject\DotNet2025_7984_4327\Tools\obj\Debug\Tools.AssemblyInfo.cs
+C:\Users\user1\Desktop\FinalProject\DotNet2025_7984_4327\Tools\obj\Debug\Tools.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\FinalProject\DotNet2025_7984_4327\Tools\obj\Debug\Tools.dll
+C:\Users\user1\Desktop\FinalProject\DotNet2025_7984_4327\Tools\obj\Debug\refint\Tools.dll
+C:\Users\user1\Desktop\FinalProject\DotNet2025_7984_4327\Tools\obj\Debug\Tools.pdb
+C:\Users\user1\Desktop\FinalProject\DotNet2025_7984_4327\Tools\obj\Debug\ref\Tools.dll
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\bin\Tools.deps.json
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\bin\Tools.dll
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\bin\Tools.pdb
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\Tools\obj\Debug\Tools.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\Tools\obj\Debug\Tools.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\Tools\obj\Debug\Tools.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\Tools\obj\Debug\Tools.AssemblyInfo.cs
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\Tools\obj\Debug\Tools.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\Tools\obj\Debug\Tools.dll
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\Tools\obj\Debug\refint\Tools.dll
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\Tools\obj\Debug\Tools.pdb
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\Tools\obj\Debug\ref\Tools.dll
