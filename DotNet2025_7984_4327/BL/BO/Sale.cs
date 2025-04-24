@@ -8,13 +8,15 @@ namespace BO
 {
     public class Sale
     {
-        public int saleId { get; init; }
-        public int productId { get; init; }
-        public int? requiredQuantityForDiscount { get; set; }
-        public bool isIntendedForAllCustomers { get; set; }
-        public int finalPrice { get; set; }
-        public DateTime saleStartDate { get; set; }
-        public DateTime? saleEndDate { get; set; }
+        public int SaleId { get; init; }
+        public int SaleProductId { get; init; }
+        public int? RequiredQuantityForDiscount { get; set; }
+        public bool IsIntendedForAllCustomers { get; set; }
+        public int FinalPrice { get; set; }
+        public DateTime SaleStartDate { get; set; }
+        public DateTime? SaleEndDate { get; set; }
+        public override string ToString() => this.ToStringProperty();
+
 
     }
 }

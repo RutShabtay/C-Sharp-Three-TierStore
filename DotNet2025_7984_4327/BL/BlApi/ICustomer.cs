@@ -10,6 +10,6 @@ namespace BlApi
         List<BO.Customer> ReadAll(Func<DO.Customer, bool>? filter = null);
         void Update(BO.Customer item);
         void Delete(int id);
-        bool isExists(int customerId);
+        bool IsExists(int customerId);
     }
 }

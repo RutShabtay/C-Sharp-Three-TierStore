@@ -10,19 +10,19 @@ internal class SaleImplementation:ISale
     public int Create(Sale item)
     {
 
-        if ((DataSource.Sales.FirstOrDefault(i => i.saleId == item.saleId)) != null)
+        if ((DataSource.Sales.FirstOrDefault(i => i.SaleId == item.SaleId)) != null)
             throw new DalAlreadyExistsIdException("this Sale already exists.");
         DataSource.Sales.Add(item);
         string message = "Create a Sale Object.";
         Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
 
-        return item.saleId;
+        return item.SaleId;
 
     }
 
     public Sale? Read(int id)
     {
-        Sale c = DataSource.Sales.FirstOrDefault(i => i.saleId == id);
+        Sale c = DataSource.Sales.FirstOrDefault(i => i.SaleId == id);
 
         if (c != null)
         {
@@ -62,11 +62,11 @@ internal class SaleImplementation:ISale
 
     public void Update(Sale item)
     {
-        Sale c = DataSource.Sales.FirstOrDefault(i => i.saleId == item.saleId);
+        Sale c = DataSource.Sales.FirstOrDefault(i => i.SaleId == item.SaleId);
 
         if (c != null)
         {
-            Delete(c.saleId);
+            Delete(c.SaleId);
             Create(item);
             string message = "Update a Sale Object.";
             Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
@@ -79,7 +79,7 @@ internal class SaleImplementation:ISale
 
     public void Delete(int id)
     {
-        Sale c = DataSource.Sales.FirstOrDefault(i => i.saleId == id);
+        Sale c = DataSource.Sales.FirstOrDefault(i => i.SaleId == id);
         {
             if (c != null)
             {

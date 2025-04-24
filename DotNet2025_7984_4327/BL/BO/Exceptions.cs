@@ -1,12 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace BO;
 
-namespace BO
+[Serializable]
+public class BlNotExistsIdException : Exception
 {
-    internal class Exceptions
+
+    public BlNotExistsIdException(string? message) : base(message)
+    {
+    }
+    public BlNotExistsIdException(string message, Exception innerException)
+        : base(message, innerException) { }
+
+}
+
+[Serializable]
+public class BlAlreadyExistsIdException : Exception
+{
+
+    public BlAlreadyExistsIdException(string message) : base(message)
+    {
+    }
+
+    public BlAlreadyExistsIdException(string message, Exception innerException)
+        : base(message, innerException)
+    {
+    }
+
+}
+
+public class BlGeneralException : Exception
+{
+
+    public BlGeneralException(string message) : base(message)
     {
     }
 }
+
+public class BlInvalidQuantity : Exception
+{
+
+    public BlInvalidQuantity(string message) : base(message)
+    {
+    }
+}
+
+

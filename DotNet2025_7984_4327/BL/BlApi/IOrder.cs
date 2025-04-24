@@ -9,10 +9,12 @@ namespace BlApi
 {
     public interface IOrder
     {
+
         List<SaleInProduct>? AddProductToOrder(Order order, int productId, int quantity);
-        void CalcTotalPriceForProduct(ProductInOrder product);
+        void CalcTotalPriceForProduct(ProductInOrder product, bool isPreferredCustomer);
         void CalcTotalPrice(Order order);
         void DoOrder(Order order);
+        List<BO.SaleInProduct>? SearchSaleForProduct(ProductInOrder product, bool isPreferredCustomer);
 
     }
 }

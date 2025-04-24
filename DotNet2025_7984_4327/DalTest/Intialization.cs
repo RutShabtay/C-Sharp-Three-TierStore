@@ -19,11 +19,11 @@ public class Intialization
 
     private static void createProducts()
     {
-        s_dal.Product.Create(new Product(2, "DisneyPajamas", Catagories.Pajamas, 120, 52));
-        s_dal.Product.Create(new Product(3, "Chanel Bleu de Chanel", Catagories.perfume, 620, 20));
-        s_dal.Product.Create(new Product(4, "Fur slippers", Catagories.slippers, 80, 152));
-        s_dal.Product.Create(new Product(5, "TomAndJerryPajamas", Catagories.Pajamas, 198, 70));
-        s_dal.Product.Create(new Product(6, "Versace Eros", Catagories.perfume, 780, 12));
+        s_dal.Product.Create(new Product(2, "DisneyPajamas", Catagories.Necklaces, 120, 52));
+        s_dal.Product.Create(new Product(3, "Chanel Bleu de Chanel", Catagories.Bracelets, 620, 20));
+        s_dal.Product.Create(new Product(4, "Fur slippers", Catagories.Bracelets, 80, 152));
+        s_dal.Product.Create(new Product(5, "TomAndJerryPajamas", Catagories.Earrings, 198, 70));
+        s_dal.Product.Create(new Product(6, "Versace Eros", Catagories.Rings, 780, 12));
 
     }
 

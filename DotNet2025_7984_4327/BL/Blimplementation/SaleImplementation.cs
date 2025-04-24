@@ -8,35 +8,81 @@ using System.Threading.Tasks;
 
 namespace Blimplementation
 {
-    internal class SaleImplementation
+    internal class SaleImplementation : BlApi.ISale
     {
         private IDal _dal = DalApi.Factory.Get;
         public int Create(BO.Sale item)
         {
-            return _dal.Sale.Create(item.SaleToDo());
+            try
+            {
+                return _dal.Sale.Create(item.SaleToDo());
+
+            }
+            catch (Exception ex)
+            {
+                throw new BO.BlAlreadyExistsIdException("", ex);
+            }
         }
         public BO.Sale? Read(int id)
         {
-            return _dal.Sale.Read(id)?.SaleToBo();
+            try
+            {
+                return _dal.Sale.Read(id)?.SaleToBo();
+            }
+            catch (Exception ex)
+            {
+                throw new BO.BlNotExistsIdException("", ex);
+            }
         }
         public BO.Sale? Read(Func<DO.Sale, bool> filter)
         {
-            return _dal.Sale.Read(filter)?.SaleToBo();
+            try
+            {
+                return _dal.Sale.Read(filter)?.SaleToBo();
+            }
+
+            catch (Exception ex)
+            {
+                throw new BO.BlNotExistsIdException("", ex);
+            }
 
         }
         public List<BO.Sale> ReadAll(Func<DO.Sale, bool>? filter = null)
         {
-            return _dal.Sale.ReadAll(filter)?.Select(q => q.SaleToBo()).ToList() ?? new List<BO.Sale>();
+            try
+            {
+                return _dal.Sale.ReadAll(filter)?.Select(q => q.SaleToBo()).ToList() ?? new List<BO.Sale>();
+
+            }
+            catch (Exception ex)
+            {
+                throw new BO.BlGeneralException("Error Occured in func ReadAll" + ex.Message);
+            }
 
         }
         public void Update(BO.Sale item)
         {
-            _dal.Sale.Update(item.SaleToDo());
+            try
+            {
+                _dal.Sale.Update(item.SaleToDo());
+            }
+            catch (Exception ex)
+            {
+                throw new BO.BlNotExistsIdException("", ex);
+            }
 
         }
         public void Delete(int id)
         {
-            _dal.Sale.Delete(id);
+            try
+            {
+                _dal.Sale.Delete(id);
+            }
+            catch (Exception ex)
+            {
+                throw new BO.BlNotExistsIdException("", ex);
+            }
+
         }
     }
 }

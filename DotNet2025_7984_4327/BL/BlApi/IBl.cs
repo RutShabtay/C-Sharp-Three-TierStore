@@ -11,6 +11,6 @@ namespace BlApi
         ICustomer Customer { get; }
         IOrder Order { get; }
         IProduct Product { get; }
-        ISale sale { get; }
+        ISale Sale { get; }
     }
 }

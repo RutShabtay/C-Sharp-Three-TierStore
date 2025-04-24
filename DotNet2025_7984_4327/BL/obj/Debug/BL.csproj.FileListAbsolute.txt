@@ -3,3 +3,11 @@ C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\BL\obj\Debug\BL.Generated
 C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\BL\obj\Debug\BL.AssemblyInfoInputs.cache
 C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\BL\obj\Debug\BL.AssemblyInfo.cs
 C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\bin\BL.deps.json
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\bin\BL.dll
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\bin\BL.pdb
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\BL\obj\Debug\BL.dll
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\BL\obj\Debug\refint\BL.dll
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\BL\obj\Debug\BL.pdb
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\BL\obj\Debug\ref\BL.dll

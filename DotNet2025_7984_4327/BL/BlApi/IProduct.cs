@@ -15,8 +15,6 @@ namespace BlApi
         List<BO.Product> ReadAll(Func<DO.Product, bool>? filter = null);
         void Update(BO.Product item);
         void Delete(int id);
-
-        List<SaleInProduct>? salesInProduct(int productId,bool isPreferredCustomer);
-
+        List<BO.SaleInProduct>? GetActiveSales(int productId, bool IsPreferredCustomer);
     }
 }

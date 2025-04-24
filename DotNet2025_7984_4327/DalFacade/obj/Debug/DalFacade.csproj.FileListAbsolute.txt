@@ -23,3 +23,7 @@ C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\DalFacade\obj\Debug\DalFa
 C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\DalFacade\obj\Debug\DalFacade.dll
 C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\DalFacade\obj\Debug\refint\DalFacade.dll
 C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\DalFacade\obj\Debug\DalFacade.pdb
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\bin\DalFacade.deps.json
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\bin\DalFacade.dll
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\bin\DalFacade.pdb
+C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\DalFacade\obj\Debug\ref\DalFacade.dll

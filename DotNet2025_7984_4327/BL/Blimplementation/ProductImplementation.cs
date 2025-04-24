@@ -11,6 +11,7 @@ namespace Blimplementation
     internal class ProductImplementation : BlApi.IProduct
     {
         private IDal _dal = DalApi.Factory.Get;
+
         public int Create(BO.Product item)
         {
             try
@@ -19,7 +20,7 @@ namespace Blimplementation
             }
             catch (Exception ex)
             {
-                throw new BO.BlDeliverDalException(ex, ex.Message);
+                throw new BO.BlAlreadyExistsIdException("", ex);
             }
         }
         public BO.Product? Read(int id)
@@ -30,7 +31,7 @@ namespace Blimplementation
             }
             catch (Exception ex)
             {
-                throw new BO.BlDeliverDalException(ex, ex.Message);
+                throw new BO.BlNotExistsIdException("", ex);
             }
 
         }
@@ -42,7 +43,7 @@ namespace Blimplementation
             }
             catch (Exception ex)
             {
-                throw new BO.BlDeliverDalException(ex, ex.Message);
+                throw new BO.BlNotExistsIdException("", ex);
             }
         }
         public List<BO.Product> ReadAll(Func<DO.Product, bool>? filter = null)
@@ -53,7 +54,7 @@ namespace Blimplementation
             }
             catch (Exception ex)
             {
-                throw new BO.BlDeliverDalException(ex, ex.Message);
+                throw new BO.BlGeneralException("Error Occured if func: BL-ReadAll " + ex.Message);
             }
         }
         public void Update(BO.Product item)
@@ -64,7 +65,7 @@ namespace Blimplementation
             }
             catch (Exception ex)
             {
-                throw new BO.BlDeliverDalException(ex, ex.Message);
+                throw new BO.BlNotExistsIdException("", ex);
             }
         }
         public void Delete(int id)
@@ -75,25 +76,46 @@ namespace Blimplementation
             }
             catch (Exception ex)
             {
-                throw new BO.BlDeliverDalException(ex, ex.Message);
+                throw new BO.BlNotExistsIdException("", ex);
             }
         }
 
-        public void salesInProduct(int productId, bool isPreferredCustomer)
+        //קבלת כל המבצעים של מוצר מסויים ללא סינון של כמות תקינה
+        public List<BO.SaleInProduct>? GetActiveSales(int productId, bool IsPreferredCustomer)
         {
-            List<DO.Sale> allSales;
             try
             {
-                allSales = _dal.Sale.ReadAll();
+                //קבלת כל המבצעים
+                List<DO.Sale> allSales = _dal.Sale.ReadAll();
+
+                //סינון מבצע של אותו מוצר
+                allSales = (from s in allSales
+                            where s.SaleProductId == productId
+                            select s).ToList();
+
+                //במידה ולקוח שאינו במועדון סינון רק מבצעים המתאימים לו
+                if (!IsPreferredCustomer)
+                {
+                    allSales = allSales.FindAll(s => (bool)s.IsIntendedForAllCustomers);
+                }
+
+                //המרה לרשימה המתאימה לשכבה כולל סינון מבצעים לפי תוקף
+                List<BO.SaleInProduct> saleListInProductBO = (from s in allSales
+                                                              where s.SaleStartDate <= DateTime.Now && s.SaleEndDate <= DateTime.Now
+                                                              select new BO.SaleInProduct(s.SaleId, s.RequiredQuantityForDiscount, s.FinalPrice, s.IsIntendedForAllCustomers)).ToList();
+
+                return saleListInProductBO.OrderBy(p => p.Price / p.QuantityForSale).ToList();
             }
             catch (Exception ex)
             {
-                throw new BO.BlDeliverDalException(ex, ex.Message);
+                throw new BO.BlGeneralException("Error Occured in func GetActiveSales " + ex.Message);
             }
 
-            allSales.Select(s => s.productId == productId && s.saleStartDate <= DateTime.Today && s.saleEndDate >= DateTime.Today).ToList();
-            (allSales.Select(s => s.saleToSaleInProduct()).ToList() ?? new List<SaleInProduct>());
-
         }
+
+
     }
 }
+
+
+

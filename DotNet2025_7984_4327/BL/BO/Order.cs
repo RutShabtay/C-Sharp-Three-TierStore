@@ -8,8 +8,11 @@ namespace BO
 {
     public class Order
     {
-        public bool isPreferredCustomer { get; set; }
-        public List<ProductInOrder> productsInOrder { get; set; }
-        public double price { get; set; }  
+        public bool IsPreferredCustomer { get; set; }
+        public List<ProductInOrder> ProductsInOrder { get; set; }
+        public double OrderTotalPrice { get; set; }
+        public override string ToString() => this.ToStringProperty();
+
+        public Order() { }
     }
 }

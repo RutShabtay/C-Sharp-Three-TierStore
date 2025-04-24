@@ -61,13 +61,13 @@ namespace BO
         {
             return new DO.Sale
             {
-                saleId = boSale.saleId,
-                productId = boSale.productId,
-                requiredQuantityForDiscount = boSale.requiredQuantityForDiscount,
-                isIntendedForAllCustomers = boSale.isIntendedForAllCustomers,
-                finalPrice = boSale.finalPrice,
-                saleEndDate = boSale.saleEndDate,
-                saleStartDate = boSale.saleStartDate,
+                SaleId = boSale.SaleId,
+                SaleProductId = boSale.SaleProductId,
+                RequiredQuantityForDiscount = boSale.RequiredQuantityForDiscount,
+                IsIntendedForAllCustomers = boSale.IsIntendedForAllCustomers,
+                FinalPrice = boSale.FinalPrice,
+                SaleEndDate = boSale.SaleEndDate,
+                SaleStartDate = boSale.SaleStartDate,
             };
         }
 
@@ -75,17 +75,26 @@ namespace BO
         {
             return new BO.Sale
             {
-                saleId = doSale.saleId,
-                productId = doSale.productId,
-                requiredQuantityForDiscount = doSale.requiredQuantityForDiscount,
-                isIntendedForAllCustomers = doSale.isIntendedForAllCustomers,
-                finalPrice = doSale.finalPrice,
-                saleEndDate = doSale.saleEndDate,
-                saleStartDate = doSale.saleStartDate,
+                SaleId = doSale.SaleId,
+                SaleProductId = doSale.SaleProductId,
+                RequiredQuantityForDiscount = doSale.RequiredQuantityForDiscount,
+                IsIntendedForAllCustomers = doSale.IsIntendedForAllCustomers,
+                FinalPrice = doSale.FinalPrice,
+                SaleEndDate = doSale.SaleEndDate,
+                SaleStartDate = doSale.SaleStartDate,
             };
         }
 
-
+        public static SaleInProduct saleToSaleInProduct(this DO.Sale sale)
+        {
+            return new SaleInProduct
+            {
+                SaleId = sale.SaleId,
+                QuantityForSale = sale.RequiredQuantityForDiscount,
+                Price = sale.FinalPrice,
+                IsIntendedForAllCustomers = sale.IsIntendedForAllCustomers,
+            };
+        }
 
         public static string ToStringProperty<T>(this T obj)
         {
@@ -118,4 +127,4 @@ namespace BO
     }
 
 }
-}
+
