@@ -32,6 +32,7 @@ namespace Blimplementation
                     if (updateProduct.quantityInOrder + quantity == 0)
                     {
                         order.ProductsInOrder.RemoveAll(p => p.productId == productId);
+                        CalcTotalPrice(order);
                         return null;
                     }
                     updateProduct.quantityInOrder += quantity;
@@ -69,6 +70,7 @@ namespace Blimplementation
                 if (product.saleListPerProduct == null)
                 {
                     totalPrice = _dal.Product.Read(product.productId).productPrice * product.quantityInOrder;
+                    product.finalPrice = totalPrice;
                     return;
                 }
 
@@ -124,7 +126,14 @@ namespace Blimplementation
         {
             try
             {
-                List<BO.SaleInProduct>? saleListForSpecProduct = _bl.Product.GetActiveSales(product.productId, isPreferredCustomer);
+               
+
+                List<BO.SaleInProduct>? saleListForSpecProduct = _bl.IProduct.GetActiveSales(product.productId);
+                //במידה ולקוח שאינו במועדון סינון רק מבצעים המתאימים לו
+                if (!isPreferredCustomer)
+                {
+                    saleListForSpecProduct = saleListForSpecProduct.FindAll(s => (bool)s.IsIntendedForAllCustomers);
+                }
                 saleListForSpecProduct = saleListForSpecProduct?.Where(s => s.QuantityForSale <= product.quantityInOrder).ToList();
                 return saleListForSpecProduct;
             }

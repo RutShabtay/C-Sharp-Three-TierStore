@@ -50,7 +50,9 @@ namespace Blimplementation
         {
             try
             {
-                return _dal.Product.ReadAll(filter)?.Select(q => q.ProductToBo()).ToList() ?? new List<BO.Product>();
+               List<BO.Product> products= _dal.Product.ReadAll(filter)?.Select(q => q.ProductToBo()).ToList() ?? new List<BO.Product>();
+                products.ForEach(product => product.saleInProducts = GetActiveSales(product.productId));
+                return products;
             }
             catch (Exception ex)
             {
@@ -81,7 +83,7 @@ namespace Blimplementation
         }
 
         //קבלת כל המבצעים של מוצר מסויים ללא סינון של כמות תקינה
-        public List<BO.SaleInProduct>? GetActiveSales(int productId, bool IsPreferredCustomer)
+        public List<BO.SaleInProduct>? GetActiveSales(int productId/*, bool IsPreferredCustomer*/)
         {
             try
             {
@@ -93,11 +95,7 @@ namespace Blimplementation
                             where s.SaleProductId == productId
                             select s).ToList();
 
-                //במידה ולקוח שאינו במועדון סינון רק מבצעים המתאימים לו
-                if (!IsPreferredCustomer)
-                {
-                    allSales = allSales.FindAll(s => (bool)s.IsIntendedForAllCustomers);
-                }
+                
 
                 //המרה לרשימה המתאימה לשכבה כולל סינון מבצעים לפי תוקף
                 List<BO.SaleInProduct> saleListInProductBO = (from s in allSales

@@ -10,7 +10,7 @@ using System.Reflection;
 public class program
 {
     private static IDal s_dal = DalApi.Factory.Get;
-    private static void displayMainMenue()
+    private static void DisplayMainMenue()
     {
         Console.WriteLine("please, choose  kind of object: customer/product/sale/clearLog");
         string kindOfObject = Console.ReadLine();
@@ -163,12 +163,12 @@ public class program
         {
 
             Intialization.initialize();
-            displayMainMenue();
+            DisplayMainMenue();
 
         }
         catch (Exception ex)
         {
-            Console.WriteLine("ERRORR");
+            Console.WriteLine("ERRORR OCCURED--- (In DalTest Main).");
             Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, ex.Message);
 
         }

@@ -13,6 +13,9 @@ namespace BO
         public double OrderTotalPrice { get; set; }
         public override string ToString() => this.ToStringProperty();
 
-        public Order() { }
+        public Order()
+        {
+            ProductsInOrder = new List<ProductInOrder>();
+        }
     }
 }

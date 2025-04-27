@@ -1,6 +1,7 @@
 ﻿using BlApi;
 using BO;
 using DalApi;
+using DO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -88,9 +89,13 @@ namespace Blimplementation
                 customer = _dal.Customer.Read(customerId);
                 Console.WriteLine(customer);
             }
+            catch (DalNotExistsIdException ex)
+            {
+                return false;
+            }
             catch (Exception ex)
             {
-                throw new BO.BlNotExistsIdException("", ex);
+                throw new BO.BlGeneralException(ex.Message);
             }
             if (customer != null)
                 return true;

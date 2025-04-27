@@ -29,8 +29,8 @@ public class Intialization
 
     private static void createSales()
     {
-        s_dal.Sale.Create(new Sale(22, 1, 2, true, 100, new DateTime(2024, 11, 20), new DateTime(2024, 12, 10)));
-        s_dal.Sale.Create(new Sale(33, 2, 5, false, 150, new DateTime(2025, 01, 01), new DateTime(2025, 01, 22)));
+        s_dal.Sale.Create(new Sale(22, 6, 2, true, 100, new DateTime(2024, 11, 20), new DateTime(2024, 12, 10)));
+        s_dal.Sale.Create(new Sale(33, 6, 5, false, 150, new DateTime(2025, 01, 01), new DateTime(2025, 01, 22)));
         s_dal.Sale.Create(new Sale(44, 3, 1, true, 120, new DateTime(2024, 12, 01), new DateTime(2025, 12, 20)));
 
     }

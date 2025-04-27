@@ -12,7 +12,7 @@ public record Sale(
     )
 
 {
-    public Sale() : this(11, 1, 2, true, 100, DateTime.Now, DateTime.Now) { }
+    public Sale() : this(0, 0, 0, false, 0, DateTime.Now, DateTime.Now) { }
 
 }
 

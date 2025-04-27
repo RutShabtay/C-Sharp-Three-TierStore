@@ -14,5 +14,13 @@ namespace BO
         public string customerPhone { get; set; }
         public override string ToString() => this.ToStringProperty();
 
+        public Customer() { }
+        public Customer(int customerId, string customerName, string customerAddress, string customerPhone)
+        {
+            this.customerId = customerId;
+            this.customerName = customerName;
+            this.customerAddress = customerAddress;
+            this.customerPhone = customerPhone;
+        }
     }
 }

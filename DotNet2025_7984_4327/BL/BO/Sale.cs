@@ -17,6 +17,16 @@ namespace BO
         public DateTime? SaleEndDate { get; set; }
         public override string ToString() => this.ToStringProperty();
 
-
+        public Sale() { }
+        public Sale(int saleId, int saleProductId, int? requiredQuantityForDiscount, bool isIntendedForAllCustomers, int finalPrice, DateTime saleStartDate, DateTime? saleEndDate)
+        {
+            SaleId = saleId;
+            SaleProductId = saleProductId;
+            RequiredQuantityForDiscount = requiredQuantityForDiscount;
+            IsIntendedForAllCustomers = isIntendedForAllCustomers;
+            FinalPrice = finalPrice;
+            SaleStartDate = saleStartDate;
+            SaleEndDate = saleEndDate;
+        }
     }
 }
