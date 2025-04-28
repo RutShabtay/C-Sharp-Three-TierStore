@@ -8,7 +8,7 @@ static class DalConfig
 
     static DalConfig()
     {
-        XElement dalConfig = XElement.Load(@"..\xml\dal-config.xml") ??
+        XElement dalConfig = XElement.Load(@"C:\Users\user1\Desktop\C# PROJECT\DotNet2025_7984_4327\xml\dal-config.xml") ??
   throw new DalConfigException("dal-config.xml file is not found");
 
         s_dalName =

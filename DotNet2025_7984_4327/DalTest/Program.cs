@@ -159,19 +159,12 @@ public class program
     static void Main(string[] args)
     {
 
-        try
-        {
+        
 
             Intialization.initialize();
             DisplayMainMenue();
 
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("ERRORR OCCURED--- (In DalTest Main).");
-            Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, ex.Message);
-
-        }
+        
     }
 
 

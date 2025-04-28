@@ -103,8 +103,8 @@ namespace BO
 
             StringBuilder sb = new StringBuilder();
             Type type = obj.GetType();
-            sb.AppendLine($"{type.Name} properties:");
-
+/*            sb.AppendLine($"{type.Name} properties:");
+*/
             foreach (PropertyInfo prop in type.GetProperties())
             {
                 object value = prop.GetValue(obj, null);

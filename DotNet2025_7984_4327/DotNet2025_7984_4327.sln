@@ -16,9 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xml", "xml", "{16F427D6-8D2
 		xml\dal-config.xml = xml\dal-config.xml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{BCA09673-39A8-433F-BC14-0CE0C598085F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BL", "BL\BL.csproj", "{BCA09673-39A8-433F-BC14-0CE0C598085F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlTest", "BlTest\BlTest.csproj", "{52600560-A92E-45CA-A34A-0A6228F2DC03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlTest", "BlTest\BlTest.csproj", "{52600560-A92E-45CA-A34A-0A6228F2DC03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{1C3A0413-FF46-4EDD-86AB-8F62A47C6AA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{52600560-A92E-45CA-A34A-0A6228F2DC03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52600560-A92E-45CA-A34A-0A6228F2DC03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52600560-A92E-45CA-A34A-0A6228F2DC03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C3A0413-FF46-4EDD-86AB-8F62A47C6AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C3A0413-FF46-4EDD-86AB-8F62A47C6AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C3A0413-FF46-4EDD-86AB-8F62A47C6AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C3A0413-FF46-4EDD-86AB-8F62A47C6AA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
