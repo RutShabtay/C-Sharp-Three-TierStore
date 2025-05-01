@@ -21,3 +21,21 @@ public class DalAlreadyExistsIdException : Exception
 
 }
 
+public class DalReadForXmlException : Exception
+{
+
+    public DalReadForXmlException(string message) : base(message)
+    {
+    }
+
+}
+
+public class DalWriteForXmlException : Exception
+{
+
+    public DalWriteForXmlException(string message) : base(message)
+    {
+    }
+
+}
+

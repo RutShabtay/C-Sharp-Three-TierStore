@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DO;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -24,7 +25,5 @@ namespace BO
         }
 
         public override string ToString() => this.ToStringProperty();
-
-
     }
 }

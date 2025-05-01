@@ -43,4 +43,13 @@ public class BlInvalidQuantity : Exception
     }
 }
 
+public class BlInvalidPress : Exception
+{
+
+    public BlInvalidPress(string message) : base(message)
+    {
+    }
+}
+
+
 

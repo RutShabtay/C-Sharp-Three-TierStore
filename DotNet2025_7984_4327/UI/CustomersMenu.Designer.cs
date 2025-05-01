@@ -135,6 +135,7 @@
             addCustomer.TabIndex = 0;
             addCustomer.Text = "הוספה";
             addCustomer.UseVisualStyleBackColor = true;
+            addCustomer.Click += addCustomer_Click;
             // 
             // addButton
             // 
@@ -153,6 +154,7 @@
             CustomerAddressInput.Name = "CustomerAddressInput";
             CustomerAddressInput.Size = new Size(94, 27);
             CustomerAddressInput.TabIndex = 16;
+            CustomerAddressInput.TextChanged += CustomerAddressInput_TextChanged;
             // 
             // CustomerTelInput
             // 
@@ -187,6 +189,7 @@
             CustomerIdInput.Name = "CustomerIdInput";
             CustomerIdInput.Size = new Size(94, 27);
             CustomerIdInput.TabIndex = 12;
+            CustomerIdInput.TextChanged += CustomerIdInput_TextChanged;
             CustomerIdInput.KeyPress += CustomerIdInput_KeyPress;
             // 
             // label8

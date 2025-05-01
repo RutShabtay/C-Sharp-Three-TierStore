@@ -1,5 +1,6 @@
 ﻿using DO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -52,6 +53,7 @@ namespace BO
                 productId = doProduct.productId,
                 productName = doProduct.productName,
                 catagory = (BO.Catagories)doProduct.catagory,
+                saleInProducts = new List<BO.SaleInProduct>(),
                 productPrice = doProduct.productPrice,
                 quantityInStock = doProduct.quantityInStock,
             };
@@ -96,35 +98,45 @@ namespace BO
             };
         }
 
-        public static string ToStringProperty<T>(this T obj)
+
+        public static string ToStringProperty<T>(this T obj, int indentLevel = 0)
         {
             if (obj == null)
                 return "null";
 
             StringBuilder sb = new StringBuilder();
             Type type = obj.GetType();
-/*            sb.AppendLine($"{type.Name} properties:");
-*/
+            string indent = new string(' ', indentLevel * 2);
+
             foreach (PropertyInfo prop in type.GetProperties())
             {
                 object value = prop.GetValue(obj, null);
+
                 if (value is System.Collections.IEnumerable enumerable && !(value is string))
                 {
-                    sb.AppendLine($"{prop.Name}:");
+                    sb.AppendLine($"{indent} {prop.Name}:");
                     foreach (var item in enumerable)
                     {
-                        sb.AppendLine("  - " + item?.ToStringProperty());
+                        if (item == null)
+                        {
+                            sb.AppendLine($"{indent}   null");
+                        }
+                        else
+                        {
+                            string itemString = item.ToStringProperty(indentLevel + 2).TrimEnd();
+                            sb.AppendLine($"{indent} -  {itemString.Replace("\n", "\n" + indent + "    ")}");
+                        }
                     }
                 }
                 else
                 {
-                    sb.AppendLine($"{prop.Name}: {value}");
+                    sb.AppendLine($"{indent} {prop.Name}: {value}");
                 }
             }
 
             return sb.ToString();
         }
-    }
 
+    }
 }
 

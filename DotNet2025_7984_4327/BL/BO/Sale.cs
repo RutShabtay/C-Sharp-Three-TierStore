@@ -8,11 +8,11 @@ namespace BO
 {
     public class Sale
     {
-        public int SaleId { get; init; }
-        public int SaleProductId { get; init; }
+        public int SaleId { get; set; }
+        public int SaleProductId { get; set; }
         public int? RequiredQuantityForDiscount { get; set; }
         public bool IsIntendedForAllCustomers { get; set; }
-        public int FinalPrice { get; set; }
+        public double FinalPrice { get; set; }
         public DateTime SaleStartDate { get; set; }
         public DateTime? SaleEndDate { get; set; }
         public override string ToString() => this.ToStringProperty();

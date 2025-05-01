@@ -82,6 +82,7 @@
             Controls.Add(label1);
             Name = "OrderToCustomer";
             Text = "OrderToCustomer";
+            Load += OrderToCustomer_Load;
             ResumeLayout(false);
             PerformLayout();
         }

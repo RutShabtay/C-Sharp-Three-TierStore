@@ -6,8 +6,8 @@ namespace UI
         [STAThread]
         static void Main()
         {
-            DalTest.Intialization.initialize();
-            ApplicationConfiguration.Initialize();
+/*            DalTest.Intialization.initialize();
+*/            ApplicationConfiguration.Initialize();
             Application.Run(new PandoraHome());
         }
     }

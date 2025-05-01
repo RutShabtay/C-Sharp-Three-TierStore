@@ -18,8 +18,16 @@ namespace Blimplementation
 
         public List<SaleInProduct>? AddProductToOrder(Order order, int productId, int quantity)
         {
-            BO.Product product = _dal.Product.Read(productId).ProductToBo();
-            BO.ProductInOrder updateProduct = order.ProductsInOrder.Find(p => p.productId == productId);
+            Product product;
+            try
+            {
+                product = _dal.Product.Read(productId).ProductToBo();
+            }
+            catch(BlNotExistsIdException ex)
+            {
+                throw new BlNotExistsIdException("Not Available Item 😣");
+            }
+            ProductInOrder updateProduct = order.ProductsInOrder.Find(p => p.productId == productId);
             try
             {
                 if (product.quantityInStock < quantity)
@@ -38,6 +46,7 @@ namespace Blimplementation
                     updateProduct.quantityInOrder += quantity;
                     order.ProductsInOrder = order.ProductsInOrder.Select(p => p.productId == productId ? updateProduct : p).ToList();
                     product.quantityInStock -= quantity;
+                    product.saleInProducts = SearchSaleForProduct(updateProduct,order.IsPreferredCustomer);
                     _dal.Product.Update(product.ProductToDo());
                 }
                 else
@@ -126,13 +135,11 @@ namespace Blimplementation
         {
             try
             {
-               
-
                 List<BO.SaleInProduct>? saleListForSpecProduct = _bl.IProduct.GetActiveSales(product.productId);
                 //במידה ולקוח שאינו במועדון סינון רק מבצעים המתאימים לו
                 if (!isPreferredCustomer)
                 {
-                    saleListForSpecProduct = saleListForSpecProduct.FindAll(s => (bool)s.IsIntendedForAllCustomers);
+                    saleListForSpecProduct = saleListForSpecProduct?.FindAll(s => (bool)s.IsIntendedForAllCustomers);
                 }
                 saleListForSpecProduct = saleListForSpecProduct?.Where(s => s.QuantityForSale <= product.quantityInOrder).ToList();
                 return saleListForSpecProduct;

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Customer>
+    <customerId>213456789</customerId>
+    <customerName>Noa</customerName>
+    <customerAddress>Herzl 10, Tel Aviv</customerAddress>
+    <customerPhone>0541234567</customerPhone>
+  </Customer>
+  <Customer>
+    <customerId>987654321</customerId>
+    <customerName>Yael</customerName>
+    <customerAddress>Ben Gurion 45, Haifa</customerAddress>
+    <customerPhone>0527654321</customerPhone>
+  </Customer>
+  <Customer>
+    <customerId>456789123</customerId>
+    <customerName>Avigail</customerName>
+    <customerAddress>Dizengoff 99, Netanya</customerAddress>
+    <customerPhone>0509988776</customerPhone>
+  </Customer>
+  <Customer>
+    <customerId>112233445</customerId>
+    <customerName>Hodaya</customerName>
+    <customerAddress>Rothschild 3, Rishon Lezion</customerAddress>
+    <customerPhone>0538877665</customerPhone>
+  </Customer>
+  <Customer>
+    <customerId>998877665</customerId>
+    <customerName>Tamar</customerName>
+    <customerAddress>Begin 21, Petah Tikva</customerAddress>
+    <customerPhone>0587654321</customerPhone>
+  </Customer>
+  <Customer>
+    <customerId>334455667</customerId>
+    <customerName>Shira</customerName>
+    <customerAddress>Keren Hayesod 12, Eilat</customerAddress>
+    <customerPhone>0561122334</customerPhone>
+  </Customer>
+  <Customer>
+    <customerId>778899001</customerId>
+    <customerName>Rivka</customerName>
+    <customerAddress>HaPalmach 7, Jerusalem</customerAddress>
+    <customerPhone>0549988771</customerPhone>
+  </Customer>
+  <Customer>
+    <customerId>667788990</customerId>
+    <customerName>Michal</customerName>
+    <customerAddress>Neve Shaanan 5, Be'er Sheva</customerAddress>
+    <customerPhone>0501231234</customerPhone>
+  </Customer>
+  <Customer>
+    <customerId>445566778</customerId>
+    <customerName>Batya</customerName>
+    <customerAddress>Yehuda Halevi 6, Bnei Brak</customerAddress>
+    <customerPhone>0524567890</customerPhone>
+  </Customer>
+  <Customer>
+    <customerId>556677889</customerId>
+    <customerName>Adina</customerName>
+    <customerAddress>HaRav Kook 13, Modiin</customerAddress>
+    <customerPhone>0559988776</customerPhone>
+  </Customer>
+  <Customer>
+    <customerId>223344556</customerId>
+    <customerName>Lea</customerName>
+    <customerAddress>HaHistadrut 4, Ashdod</customerAddress>
+    <customerPhone>0536655443</customerPhone>
+  </Customer>
+  <Customer>
+    <customerId>889900112</customerId>
+    <customerName>Esther</customerName>
+    <customerAddress>Emek Refaim 8, Jerusalem</customerAddress>
+    <customerPhone>0573322110</customerPhone>
+  </Customer>
+  <Customer>
+    <customerId>112211221</customerId>
+    <customerName>Nava</customerName>
+    <customerAddress>Shivtei Israel 11, Lod</customerAddress>
+    <customerPhone>0507766554</customerPhone>
+  </Customer>
+  <Customer>
+    <customerId>991122334</customerId>
+    <customerName>Odelia</customerName>
+    <customerAddress>Hashalom 14, Ra'anana</customerAddress>
+    <customerPhone>0547891234</customerPhone>
+  </Customer>
+  <Customer>
+    <customerId>111</customerId>
+    <customerName>RUT</customerName>
+    <customerAddress>RABI AKIVA 34</customerAddress>
+    <customerPhone>0548541650</customerPhone>
+  </Customer>
+  <Customer>
+    <customerId>33</customerId>
+    <customerName>RRE</customerName>
+    <customerAddress>EE</customerAddress>
+    <customerPhone>33</customerPhone>
+  </Customer>
+</ArrayOfCustomer>

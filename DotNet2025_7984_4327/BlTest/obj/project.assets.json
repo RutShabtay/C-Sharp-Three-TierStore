@@ -42,9 +42,10 @@
       },
       "DalTest/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "DalFacade": "1.0.0",
+          "DalXml": "1.0.0",
           "Tools": "1.0.0"
         },
         "compile": {
@@ -52,6 +53,20 @@
         },
         "runtime": {
           "bin/placeholder/DalTest.dll": {}
+        }
+      },
+      "DalXml/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DalFacade": "1.0.0",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DalXml.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DalXml.dll": {}
         }
       },
       "Tools/1.0.0": {
@@ -86,6 +101,11 @@
       "type": "project",
       "path": "../DalTest/DalTest.csproj",
       "msbuildProject": "../DalTest/DalTest.csproj"
+    },
+    "DalXml/1.0.0": {
+      "type": "project",
+      "path": "../DalXml/DalXml.csproj",
+      "msbuildProject": "../DalXml/DalXml.csproj"
     },
     "Tools/1.0.0": {
       "type": "project",

@@ -33,7 +33,6 @@ namespace UI
 
         private void ProductsMenu_Load(object sender, EventArgs e)
         {
-
             try
             {
                 RefreshProductList();
@@ -50,7 +49,7 @@ namespace UI
         {
             try
             {
-                List<Product?> productList;
+                List<Product>? productList;
                 productsList.Items.Clear();
                 if (catagory == -1)
                 {
@@ -65,11 +64,12 @@ namespace UI
                     productsList.Items.Add("No Products---😣");
                 productList.ForEach(product =>
                 {
+                    
                     string currProduct = product.ToString() + "------------------------";
                     var productLines = currProduct.Split("\n");
                     foreach (string line in productLines)
                     {
-                        productsList.Items.Add(line);
+                        productsList.Items.Add(line.ToString());
                     }
 
                 });
@@ -251,6 +251,11 @@ namespace UI
                 MessageBox.Show("התקבלה שגיאה: " + ex.Message,
                                    "שגיאה", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+        }
+
+        private void codeProductInput_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

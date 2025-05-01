@@ -1,5 +1,6 @@
 ﻿using BO;
 using DalApi;
+using DO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace Blimplementation
         {
             try
             {
+               
                 return _dal.Product.Read(id)?.ProductToBo();
             }
             catch (Exception ex)
@@ -48,11 +50,32 @@ namespace Blimplementation
         }
         public List<BO.Product> ReadAll(Func<DO.Product, bool>? filter = null)
         {
+
+
             try
             {
-               List<BO.Product> products= _dal.Product.ReadAll(filter)?.Select(q => q.ProductToBo()).ToList() ?? new List<BO.Product>();
-                products.ForEach(product => product.saleInProducts = GetActiveSales(product.productId));
-                return products;
+                List<DO.Product?> listDO = _dal.Product.ReadAll();
+
+                List<BO.Product?> listBO;
+
+                if (filter == null)
+                {
+                    listBO = (from c in listDO
+                              select c.ProductToBo()).ToList();
+                }
+                else
+                {
+                    listBO = (from c in listDO
+                              let bo = c.ProductToBo()
+                              select bo).ToList();
+                }
+
+                foreach (var product in listBO)
+                {
+                    product.saleInProducts = GetActiveSales(product.productId);
+                }
+
+                return listBO;
             }
             catch (Exception ex)
             {
@@ -83,7 +106,7 @@ namespace Blimplementation
         }
 
         //קבלת כל המבצעים של מוצר מסויים ללא סינון של כמות תקינה
-        public List<BO.SaleInProduct>? GetActiveSales(int productId/*, bool IsPreferredCustomer*/)
+        public List<BO.SaleInProduct>? GetActiveSales(int productId, bool isPreferredCustomer=true)
         {
             try
             {
@@ -95,11 +118,18 @@ namespace Blimplementation
                             where s.SaleProductId == productId
                             select s).ToList();
 
-                
+                //במידה ויש צורך לסנן ע"פ לקוח מועדף
+                if (!isPreferredCustomer)
+                {
+                    allSales = (from s in allSales
+                                where s.IsIntendedForAllCustomers == true
+                                select s).ToList();
+
+                }
 
                 //המרה לרשימה המתאימה לשכבה כולל סינון מבצעים לפי תוקף
                 List<BO.SaleInProduct> saleListInProductBO = (from s in allSales
-                                                              where s.SaleStartDate <= DateTime.Now && s.SaleEndDate <= DateTime.Now
+                                                              where s.SaleStartDate <= DateTime.Now && s.SaleEndDate >= DateTime.Now
                                                               select new BO.SaleInProduct(s.SaleId, s.RequiredQuantityForDiscount, s.FinalPrice, s.IsIntendedForAllCustomers)).ToList();
 
                 return saleListInProductBO.OrderBy(p => p.Price / p.QuantityForSale).ToList();

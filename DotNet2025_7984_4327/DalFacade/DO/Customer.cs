@@ -7,6 +7,7 @@ public record Customer(int customerId,
     string customerAddress,
     string customerPhone)
 {
+
     public Customer() : this(0, null, null, null) { }
 
 }

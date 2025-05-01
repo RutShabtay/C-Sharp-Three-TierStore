@@ -6,7 +6,7 @@ public record Sale(
     int SaleProductId,
     int? RequiredQuantityForDiscount,
     bool IsIntendedForAllCustomers, //מציין אם המבצע מיועד לכלל הלקוחות או רק חברי מועדון
-    int FinalPrice,
+    double FinalPrice,
     DateTime SaleStartDate,
     DateTime? SaleEndDate
     )

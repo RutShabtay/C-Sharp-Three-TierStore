@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using BlApi;
 
 namespace UI
 {
     public partial class OrderToCustomer : Form
     {
+        private static IBl s_bl = BlApi.Factory.Get;
         public OrderToCustomer()
         {
             InitializeComponent();
@@ -19,8 +12,14 @@ namespace UI
 
         private void orderBtn_Click(object sender, EventArgs e)
         {
-            OrderForm order=new OrderForm();
+            OrderForm order = new OrderForm(int.Parse(inputId.Text));
+            inputId.Text = "";
             order.Show();
+        }
+
+        private void OrderToCustomer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

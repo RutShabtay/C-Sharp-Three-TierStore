@@ -264,6 +264,7 @@
             codeProductInput.Name = "codeProductInput";
             codeProductInput.Size = new Size(104, 27);
             codeProductInput.TabIndex = 19;
+            codeProductInput.TextChanged += codeProductInput_TextChanged;
             // 
             // label5
             // 
@@ -415,7 +416,7 @@
             // 
             detailProductOne.FormattingEnabled = true;
             detailProductOne.ItemHeight = 20;
-            detailProductOne.Location = new Point(86, 93);
+            detailProductOne.Location = new Point(86, 104);
             detailProductOne.Name = "detailProductOne";
             detailProductOne.RightToLeft = RightToLeft.No;
             detailProductOne.Size = new Size(169, 84);
@@ -423,7 +424,7 @@
             // 
             // showDetailsProduct
             // 
-            showDetailsProduct.Location = new Point(106, 55);
+            showDetailsProduct.Location = new Point(110, 66);
             showDetailsProduct.Margin = new Padding(3, 2, 3, 2);
             showDetailsProduct.Name = "showDetailsProduct";
             showDetailsProduct.Size = new Size(120, 32);

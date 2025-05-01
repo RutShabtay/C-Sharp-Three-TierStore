@@ -19,6 +19,7 @@ namespace UI
         public CustomersMenu()
         {
             InitializeComponent();
+            Load += CustomersMenu_Load;
         }
 
         private void customersList_SelectedIndexChanged(object sender, EventArgs e)
@@ -81,8 +82,7 @@ namespace UI
 
         private void CustomerIdInput_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // אם המשתמש מקליד תו שאינו אות או רווח, חסום את הקלט
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true;
             }
@@ -108,7 +108,7 @@ namespace UI
             }
             catch (BlAlreadyExistsIdException ex)
             {
-                MessageBox.Show("התקבלה שגיאה : " + ex.Message,
+                MessageBox.Show("הינך רשום במערכת--- : " + ex.Message,
                 "שגיאה", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
@@ -189,7 +189,7 @@ namespace UI
                 idCustomerUpdate.Text = "";
                 addressCustomerUpdate.Text = "";
                 phoneCustomerUpdate.Text = "";
-
+                codeCustomerInput.Text = "";
                 RefreshCustomerList();
             }
             catch (BlNotExistsIdException ex)
@@ -268,6 +268,21 @@ namespace UI
         {
             string phoneNum = filterByPhone.Text;
             RefreshCustomerList(phoneNum);
+
+        }
+
+        private void CustomerIdInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CustomerAddressInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addCustomer_Click(object sender, EventArgs e)
+        {
 
         }
     }

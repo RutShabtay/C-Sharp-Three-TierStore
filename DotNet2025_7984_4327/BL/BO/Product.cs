@@ -9,7 +9,7 @@ namespace BO
 {
     public class Product
     {
-        public int productId { get; init; }
+        public int productId { get; set; }
         public string productName { get; set; }
         public Catagories catagory { get; set; }
         public double productPrice { get; set; }

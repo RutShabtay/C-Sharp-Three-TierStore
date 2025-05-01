@@ -77,9 +77,11 @@
             helloName.Location = new Point(330, 14);
             helloName.Margin = new Padding(3, 2, 3, 2);
             helloName.Name = "helloName";
+            helloName.ReadOnly = true;
             helloName.RightToLeft = RightToLeft.Yes;
             helloName.Size = new Size(110, 27);
             helloName.TabIndex = 31;
+            helloName.TextChanged += helloName_TextChanged;
             // 
             // label4
             // 
@@ -102,9 +104,10 @@
             // 
             // sumOrder
             // 
-            sumOrder.Location = new Point(324, 350);
+            sumOrder.Location = new Point(336, 350);
             sumOrder.Margin = new Padding(3, 2, 3, 2);
             sumOrder.Name = "sumOrder";
+            sumOrder.ReadOnly = true;
             sumOrder.Size = new Size(106, 27);
             sumOrder.TabIndex = 28;
             // 
@@ -126,6 +129,7 @@
             endOrder.TabIndex = 26;
             endOrder.Text = "סיום הזמנה";
             endOrder.UseVisualStyleBackColor = true;
+            endOrder.Click += endOrder_Click;
             // 
             // add
             // 
@@ -165,6 +169,7 @@
             addProductToOrder.TabIndex = 19;
             addProductToOrder.Text = "הוסף להזמנה";
             addProductToOrder.UseVisualStyleBackColor = true;
+            addProductToOrder.Click += addProductToOrder_Click;
             // 
             // amountToOrderProduct
             // 
@@ -173,6 +178,7 @@
             amountToOrderProduct.Name = "amountToOrderProduct";
             amountToOrderProduct.Size = new Size(131, 27);
             amountToOrderProduct.TabIndex = 18;
+            amountToOrderProduct.ValueChanged += amountToOrderProduct_ValueChanged;
             // 
             // label1
             // 
@@ -207,7 +213,7 @@
             deleteProduct.Controls.Add(nameProductLable);
             deleteProduct.Location = new Point(4, 29);
             deleteProduct.Name = "deleteProduct";
-            deleteProduct.Size = new Size(397, 209);
+            deleteProduct.Size = new Size(368, 209);
             deleteProduct.TabIndex = 3;
             deleteProduct.Text = "מחיקת מוצר";
             deleteProduct.UseVisualStyleBackColor = true;
@@ -221,6 +227,7 @@
             deleteFromOrder.TabIndex = 14;
             deleteFromOrder.Text = "מחק מההזמנה";
             deleteFromOrder.UseVisualStyleBackColor = true;
+            deleteFromOrder.Click += deleteFromOrder_Click;
             // 
             // codeProductInputTםDelete
             // 
@@ -266,6 +273,7 @@
             Controls.Add(myOrder);
             Name = "OrderForm";
             Text = "OrderForm";
+            Load += OrderForm_Load;
             add.ResumeLayout(false);
             addProduct.ResumeLayout(false);
             addProduct.PerformLayout();

@@ -88,6 +88,7 @@
             filterByCodeSale.Name = "filterByCodeSale";
             filterByCodeSale.Size = new Size(110, 27);
             filterByCodeSale.TabIndex = 11;
+            filterByCodeSale.TextChanged += filterByCodeSale_TextChanged;
             // 
             // label11
             // 
@@ -155,6 +156,7 @@
             isOnlyClubInput.TabIndex = 25;
             isOnlyClubInput.Text = "מבצע לחברי מועדון בלבד";
             isOnlyClubInput.UseVisualStyleBackColor = true;
+            isOnlyClubInput.CheckedChanged += isOnlyClubInput_CheckedChanged;
             // 
             // idSaleProductInput
             // 
@@ -233,6 +235,7 @@
             addSaleBtn.TabIndex = 13;
             addSaleBtn.Text = "הוספה";
             addSaleBtn.UseVisualStyleBackColor = true;
+            addSaleBtn.Click += addSaleBtn_Click;
             // 
             // minAmountSaleInput
             // 
@@ -276,6 +279,7 @@
             update.TabIndex = 1;
             update.Text = "עדכון";
             update.UseVisualStyleBackColor = true;
+            update.Click += update_Click;
             // 
             // isOnlyClubInputUpdate
             // 
@@ -296,6 +300,7 @@
             searchSaleBtn.TabIndex = 40;
             searchSaleBtn.Text = "חפש מבצע";
             searchSaleBtn.UseVisualStyleBackColor = true;
+            searchSaleBtn.Click += searchSaleBtn_Click;
             // 
             // idSalePInput
             // 
@@ -374,6 +379,7 @@
             saveUpdatedBtn.TabIndex = 29;
             saveUpdatedBtn.Text = "עדכן";
             saveUpdatedBtn.UseVisualStyleBackColor = true;
+            saveUpdatedBtn.Click += saveUpdatedBtn_Click;
             // 
             // minAmountSaleInputUpdate
             // 
@@ -422,6 +428,7 @@
             delete.TabIndex = 2;
             delete.Text = "מחיקה";
             delete.UseVisualStyleBackColor = true;
+            delete.Click += delete_Click;
             // 
             // deleteBtn
             // 
@@ -432,6 +439,7 @@
             deleteBtn.TabIndex = 5;
             deleteBtn.Text = "מחיקה";
             deleteBtn.UseVisualStyleBackColor = true;
+            deleteBtn.Click += deleteBtn_Click;
             // 
             // codeSaleInputToDelete
             // 
@@ -465,7 +473,7 @@
             // 
             // codeSaleInputSearch
             // 
-            codeSaleInputSearch.Location = new Point(130, 42);
+            codeSaleInputSearch.Location = new Point(139, 42);
             codeSaleInputSearch.Name = "codeSaleInputSearch";
             codeSaleInputSearch.Size = new Size(100, 27);
             codeSaleInputSearch.TabIndex = 14;
@@ -474,26 +482,28 @@
             // 
             detailsSale.FormattingEnabled = true;
             detailsSale.ItemHeight = 20;
-            detailsSale.Location = new Point(109, 108);
+            detailsSale.Location = new Point(102, 116);
             detailsSale.Name = "detailsSale";
             detailsSale.RightToLeft = RightToLeft.No;
-            detailsSale.Size = new Size(169, 84);
+            detailsSale.Size = new Size(299, 144);
             detailsSale.TabIndex = 13;
+            detailsSale.SelectedIndexChanged += detailsSale_SelectedIndexChanged;
             // 
             // showDetailsSale
             // 
-            showDetailsSale.Location = new Point(130, 80);
+            showDetailsSale.Location = new Point(185, 80);
             showDetailsSale.Margin = new Padding(3, 2, 3, 2);
             showDetailsSale.Name = "showDetailsSale";
-            showDetailsSale.Size = new Size(120, 23);
+            showDetailsSale.Size = new Size(120, 30);
             showDetailsSale.TabIndex = 12;
             showDetailsSale.Text = "הצג פרטי מבצע";
             showDetailsSale.UseVisualStyleBackColor = true;
+            showDetailsSale.Click += showDetailsSale_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(237, 45);
+            label1.Location = new Point(246, 45);
             label1.Name = "label1";
             label1.Size = new Size(109, 20);
             label1.TabIndex = 10;
@@ -510,6 +520,7 @@
             Controls.Add(add);
             Name = "SalesMenu";
             Text = "SalesMenu";
+            Load += SalesMenu_Load;
             add.ResumeLayout(false);
             addCustomer.ResumeLayout(false);
             addCustomer.PerformLayout();
