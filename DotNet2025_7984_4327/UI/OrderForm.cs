@@ -20,7 +20,7 @@ namespace UI
         {
             try
             {
-                
+
                 order.IsPreferredCustomer = s_bl.ICustomer.IsExists(CustomerId);
                 if (!order.IsPreferredCustomer)
                 {

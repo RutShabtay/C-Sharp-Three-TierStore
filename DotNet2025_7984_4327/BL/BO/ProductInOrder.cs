@@ -8,7 +8,7 @@ namespace BO
 {
     public class ProductInOrder
     {
-        public int productId { get; init; }
+        public int productId { get; set; }
         public string productName { get; set; }
         public double basePrice { get; set; }
         public int quantityInOrder { get; set; }
@@ -22,7 +22,7 @@ namespace BO
             this.productName = productName;
             this.basePrice = basePrice;
             this.quantityInOrder = quantityInOrder;
-            this.saleListPerProduct = saleListPerProduct;
+            this.saleListPerProduct =new List<SaleInProduct>();
             this.finalPrice = finalPrice;
         }
         public override string ToString() => this.ToStringProperty();

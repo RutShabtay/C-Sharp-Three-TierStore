@@ -28,8 +28,9 @@ namespace Blimplementation
         {
             try
             {
-               
-                return _dal.Product.Read(id)?.ProductToBo();
+                BO.Product? product = _dal.Product.Read(id)?.ProductToBo();
+                product.saleInProducts = GetActiveSales(product.productId);
+                return product;
             }
             catch (Exception ex)
             {
@@ -41,7 +42,9 @@ namespace Blimplementation
         {
             try
             {
-                return _dal.Product.Read(filter)?.ProductToBo();
+                BO.Product? product = _dal.Product.Read(filter)?.ProductToBo();
+                product.saleInProducts = GetActiveSales(product.productId);
+                return product;
             }
             catch (Exception ex)
             {
@@ -106,7 +109,7 @@ namespace Blimplementation
         }
 
         //קבלת כל המבצעים של מוצר מסויים ללא סינון של כמות תקינה
-        public List<BO.SaleInProduct>? GetActiveSales(int productId, bool isPreferredCustomer=true)
+        public List<BO.SaleInProduct>? GetActiveSales(int productId, bool isPreferredCustomer = true)
         {
             try
             {

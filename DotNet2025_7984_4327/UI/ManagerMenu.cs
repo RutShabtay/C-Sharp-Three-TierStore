@@ -34,5 +34,15 @@ namespace UI
             SalesMenu salesMenu = new SalesMenu();
             salesMenu.Show();
         }
+
+        private void ManagerMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ManagerMenu_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

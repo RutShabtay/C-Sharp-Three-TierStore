@@ -1,101 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Product>
-    <productId>33</productId>
+    <productId>48</productId>
+    <productName>SteelChrono Watch</productName>
+    <catagory>Watches</catagory>
+    <productPrice>350</productPrice>
+    <quantityInStock>10</quantityInStock>
+  </Product>
+  <Product>
+    <productId>49</productId>
     <productName>PearlTouch Necklace</productName>
     <catagory>Necklaces</catagory>
     <productPrice>180</productPrice>
-    <quantityInStock>34</quantityInStock>
+    <quantityInStock>32</quantityInStock>
   </Product>
   <Product>
-    <productId>35</productId>
-    <productName>EmeraldShine Ring</productName>
-    <catagory>Rings</catagory>
-    <productPrice>275</productPrice>
-    <quantityInStock>24</quantityInStock>
-  </Product>
-  <Product>
-    <productId>37</productId>
+    <productId>51</productId>
     <productName>OceanBeads Bracelet</productName>
     <catagory>Bracelets</catagory>
     <productPrice>120</productPrice>
-    <quantityInStock>59</quantityInStock>
+    <quantityInStock>57</quantityInStock>
   </Product>
   <Product>
-    <productId>38</productId>
+    <productId>52</productId>
     <productName>LunaDrop Earrings</productName>
     <catagory>Earrings</catagory>
     <productPrice>90</productPrice>
-    <quantityInStock>67</quantityInStock>
+    <quantityInStock>65</quantityInStock>
   </Product>
   <Product>
-    <productId>39</productId>
+    <productId>54</productId>
     <productName>SilverSpark Bracelet</productName>
     <catagory>Bracelets</catagory>
     <productPrice>135</productPrice>
-    <quantityInStock>48</quantityInStock>
+    <quantityInStock>45</quantityInStock>
   </Product>
   <Product>
-    <productId>40</productId>
-    <productName>DaintyHoop Earrings</productName>
-    <catagory>Earrings</catagory>
-    <productPrice>95</productPrice>
-    <quantityInStock>66</quantityInStock>
-  </Product>
-  <Product>
-    <productId>41</productId>
+    <productId>55</productId>
     <productName>Infinity Ring</productName>
     <catagory>Rings</catagory>
     <productPrice>200</productPrice>
-    <quantityInStock>31</quantityInStock>
+    <quantityInStock>28</quantityInStock>
   </Product>
   <Product>
     <productId>42</productId>
     <productName>CrystalBloom Earrings</productName>
     <catagory>Earrings</catagory>
     <productPrice>110</productPrice>
-    <quantityInStock>54</quantityInStock>
+    <quantityInStock>52</quantityInStock>
   </Product>
   <Product>
     <productId>43</productId>
     <productName>VelvetGold Ring</productName>
     <catagory>Rings</catagory>
     <productPrice>230</productPrice>
-    <quantityInStock>19</quantityInStock>
+    <quantityInStock>18</quantityInStock>
   </Product>
   <Product>
     <productId>44</productId>
     <productName>Midnight Classic Watch</productName>
     <catagory>Watches</catagory>
     <productPrice>320</productPrice>
-    <quantityInStock>19</quantityInStock>
+    <quantityInStock>12</quantityInStock>
   </Product>
   <Product>
     <productId>45</productId>
     <productName>RoseTime Watch</productName>
     <catagory>Watches</catagory>
     <productPrice>280</productPrice>
-    <quantityInStock>20</quantityInStock>
-  </Product>
-  <Product>
-    <productId>46</productId>
-    <productName>Twilight Charm</productName>
-    <catagory>Necklaces</catagory>
-    <productPrice>220</productPrice>
-    <quantityInStock>10</quantityInStock>
+    <quantityInStock>17</quantityInStock>
   </Product>
   <Product>
     <productId>47</productId>
     <productName>RoseGold Bracelet</productName>
     <catagory>Bracelets</catagory>
     <productPrice>150</productPrice>
-    <quantityInStock>38</quantityInStock>
+    <quantityInStock>37</quantityInStock>
   </Product>
   <Product>
-    <productId>48</productId>
-    <productName>SteelChrono Watch</productName>
-    <catagory>Watches</catagory>
-    <productPrice>350</productPrice>
-    <quantityInStock>10</quantityInStock>
+    <productId>46</productId>
+    <productName>Twilight Charm</productName>
+    <catagory>Necklaces</catagory>
+    <productPrice>20</productPrice>
+    <quantityInStock>7</quantityInStock>
+  </Product>
+  <Product>
+    <productId>50</productId>
+    <productName>EmeraldShine Ring</productName>
+    <catagory>Rings</catagory>
+    <productPrice>275</productPrice>
+    <quantityInStock>17</quantityInStock>
   </Product>
 </ArrayOfProduct>

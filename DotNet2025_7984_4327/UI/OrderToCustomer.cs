@@ -12,12 +12,23 @@ namespace UI
 
         private void orderBtn_Click(object sender, EventArgs e)
         {
+            if (inputId.Text == "")
+            {
+                MessageBox.Show("הזן תעודת זהות---");
+                return;
+            }
+
             OrderForm order = new OrderForm(int.Parse(inputId.Text));
             inputId.Text = "";
             order.Show();
         }
 
         private void OrderToCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

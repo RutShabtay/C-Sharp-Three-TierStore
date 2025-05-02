@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PandoraHome));
             manager = new Button();
             seller = new Button();
             pandoraLogo = new PictureBox();
@@ -36,9 +37,11 @@
             // 
             // manager
             // 
-            manager.Location = new Point(611, 309);
+            manager.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            manager.Location = new Point(679, 349);
+            manager.Margin = new Padding(3, 2, 3, 2);
             manager.Name = "manager";
-            manager.Size = new Size(123, 50);
+            manager.Size = new Size(186, 86);
             manager.TabIndex = 0;
             manager.Text = "מנהל";
             manager.UseVisualStyleBackColor = true;
@@ -46,9 +49,11 @@
             // 
             // seller
             // 
-            seller.Location = new Point(611, 365);
+            seller.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            seller.Location = new Point(679, 446);
+            seller.Margin = new Padding(3, 2, 3, 2);
             seller.Name = "seller";
-            seller.Size = new Size(123, 50);
+            seller.Size = new Size(186, 86);
             seller.TabIndex = 1;
             seller.Text = "קופאי";
             seller.UseVisualStyleBackColor = true;
@@ -56,28 +61,33 @@
             // 
             // pandoraLogo
             // 
+            pandoraLogo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             pandoraLogo.BackColor = Color.White;
-            pandoraLogo.Image = Properties.Resources.logo_png_removebg_preview;
-            pandoraLogo.Location = new Point(65, 332);
+            pandoraLogo.Image = (Image)resources.GetObject("pandoraLogo.Image");
+            pandoraLogo.Location = new Point(96, 368);
+            pandoraLogo.Margin = new Padding(1);
             pandoraLogo.Name = "pandoraLogo";
-            pandoraLogo.Size = new Size(246, 70);
-            pandoraLogo.SizeMode = PictureBoxSizeMode.CenterImage;
+            pandoraLogo.Size = new Size(593, 110);
+            pandoraLogo.SizeMode = PictureBoxSizeMode.Zoom;
             pandoraLogo.TabIndex = 2;
             pandoraLogo.TabStop = false;
             pandoraLogo.Click += pictureBox1_Click;
             // 
             // PandoraHome
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.תכשיטי_PANDORA_צילום_יחצ_חול_3_1_1;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(989, 575);
             Controls.Add(pandoraLogo);
             Controls.Add(seller);
             Controls.Add(manager);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "PandoraHome";
             Text = "  ";
+            WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pandoraLogo).EndInit();
             ResumeLayout(false);

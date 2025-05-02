@@ -64,7 +64,7 @@ namespace UI
                     productsList.Items.Add("No Products---😣");
                 productList.ForEach(product =>
                 {
-                    
+
                     string currProduct = product.ToString() + "------------------------";
                     var productLines = currProduct.Split("\n");
                     foreach (string line in productLines)
@@ -204,6 +204,7 @@ namespace UI
                 int productCode = int.Parse(codeInputToDelete.Text);
                 s_bl.IProduct.Delete(productCode);
                 MessageBox.Show("המוצר הוסר בהצלחה !!!YAY🎉🎉🎉", "הצלחה", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                codeInputToDelete.Text = "";
                 RefreshProductList();
 
             }
@@ -228,7 +229,7 @@ namespace UI
             try
             {
                 int proId = int.Parse(idProductSearch.Text);
-                Product prod = s_bl.IProduct.Read(proId);
+                Product? prod = s_bl.IProduct.Read(proId);
                 string prodDetails = prod.ToString();
                 detailProductOne.Items.Add("------פרטי מוצר 👇------\n");
                 var productLines = prodDetails.Split("\n");

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsMenu));
             filterCategory = new ComboBox();
             label11 = new Label();
             productsList = new ListBox();
@@ -64,6 +65,7 @@
             showDetailsProduct = new Button();
             idProductSearch = new TextBox();
             label10 = new Label();
+            pictureBox1 = new PictureBox();
             add.SuspendLayout();
             addCustomer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)amountInput).BeginInit();
@@ -73,52 +75,57 @@
             ((System.ComponentModel.ISupportInitialize)price).BeginInit();
             delete.SuspendLayout();
             detailProduct.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // filterCategory
             // 
+            filterCategory.Anchor = AnchorStyles.Right;
             filterCategory.FormattingEnabled = true;
             filterCategory.Items.AddRange(new object[] { "Necklaces ", "Bracelets", "Earrings", "Rings", "Watches      " });
-            filterCategory.Location = new Point(508, 122);
+            filterCategory.Location = new Point(89, 21);
             filterCategory.Margin = new Padding(3, 2, 3, 2);
             filterCategory.Name = "filterCategory";
-            filterCategory.Size = new Size(133, 28);
+            filterCategory.Size = new Size(181, 23);
             filterCategory.TabIndex = 11;
             filterCategory.SelectedIndexChanged += filterCategory_SelectedIndexChanged;
             // 
             // label11
             // 
+            label11.Anchor = AnchorStyles.Right;
             label11.AutoSize = true;
-            label11.Location = new Point(647, 125);
+            label11.Location = new Point(220, 24);
             label11.Name = "label11";
-            label11.Size = new Size(111, 20);
+            label11.Size = new Size(89, 15);
             label11.TabIndex = 10;
             label11.Text = "סנן לפי קטגוריה";
             // 
             // productsList
             // 
+            productsList.Anchor = AnchorStyles.Right;
             productsList.FormattingEnabled = true;
-            productsList.ItemHeight = 20;
-            productsList.Location = new Point(494, 159);
+            productsList.ItemHeight = 15;
+            productsList.Location = new Point(77, 51);
             productsList.Margin = new Padding(2);
             productsList.Name = "productsList";
-            productsList.Size = new Size(242, 184);
+            productsList.Size = new Size(288, 244);
             productsList.TabIndex = 8;
             productsList.SelectedIndexChanged += productsList_SelectedIndexChanged;
             // 
             // add
             // 
+            add.Anchor = AnchorStyles.Left;
             add.Controls.Add(addCustomer);
             add.Controls.Add(update);
             add.Controls.Add(delete);
             add.Controls.Add(detailProduct);
-            add.Location = new Point(32, 89);
+            add.Location = new Point(353, 11);
             add.Margin = new Padding(3, 2, 3, 2);
             add.Name = "add";
             add.RightToLeft = RightToLeft.Yes;
             add.RightToLeftLayout = true;
             add.SelectedIndex = 0;
-            add.Size = new Size(446, 259);
+            add.Size = new Size(510, 286);
             add.TabIndex = 9;
             // 
             // addCustomer
@@ -132,29 +139,29 @@
             addCustomer.Controls.Add(nameProductInput);
             addCustomer.Controls.Add(priceLable);
             addCustomer.Controls.Add(nameProductLable);
-            addCustomer.Location = new Point(4, 29);
+            addCustomer.Location = new Point(4, 24);
             addCustomer.Margin = new Padding(3, 2, 3, 2);
             addCustomer.Name = "addCustomer";
             addCustomer.Padding = new Padding(3, 2, 3, 2);
-            addCustomer.Size = new Size(438, 226);
+            addCustomer.Size = new Size(502, 258);
             addCustomer.TabIndex = 0;
             addCustomer.Text = "הוספה";
             addCustomer.UseVisualStyleBackColor = true;
             // 
             // amountInput
             // 
-            amountInput.Location = new Point(163, 116);
+            amountInput.Location = new Point(134, 127);
             amountInput.Margin = new Padding(3, 2, 3, 2);
             amountInput.Name = "amountInput";
-            amountInput.Size = new Size(131, 27);
+            amountInput.Size = new Size(115, 23);
             amountInput.TabIndex = 8;
             // 
             // amountLable
             // 
             amountLable.AutoSize = true;
-            amountLable.Location = new Point(341, 123);
+            amountLable.Location = new Point(289, 132);
             amountLable.Name = "amountLable";
-            amountLable.Size = new Size(42, 20);
+            amountLable.Size = new Size(34, 15);
             amountLable.TabIndex = 7;
             amountLable.Text = "כמות";
             // 
@@ -162,27 +169,27 @@
             // 
             categoryInput.FormattingEnabled = true;
             categoryInput.Items.AddRange(new object[] { "Necklaces ", "Bracelets", "Rings    ", "Earrings  ", "Watches      " });
-            categoryInput.Location = new Point(162, 57);
+            categoryInput.Location = new Point(133, 83);
             categoryInput.Margin = new Padding(3, 2, 3, 2);
             categoryInput.Name = "categoryInput";
-            categoryInput.Size = new Size(133, 28);
+            categoryInput.Size = new Size(117, 23);
             categoryInput.TabIndex = 6;
             // 
             // category
             // 
             category.AutoSize = true;
-            category.Location = new Point(327, 59);
+            category.Location = new Point(277, 84);
             category.Name = "category";
-            category.Size = new Size(62, 20);
+            category.Size = new Size(49, 15);
             category.TabIndex = 5;
             category.Text = "קטגוריה";
             // 
             // addProduct
             // 
-            addProduct.Location = new Point(44, 158);
+            addProduct.Location = new Point(190, 176);
             addProduct.Margin = new Padding(3, 2, 3, 2);
             addProduct.Name = "addProduct";
-            addProduct.Size = new Size(97, 26);
+            addProduct.Size = new Size(85, 20);
             addProduct.TabIndex = 4;
             addProduct.Text = "שמור";
             addProduct.UseVisualStyleBackColor = true;
@@ -190,36 +197,36 @@
             // 
             // priceInput
             // 
-            priceInput.Location = new Point(162, 85);
+            priceInput.Location = new Point(133, 104);
             priceInput.Margin = new Padding(3, 2, 3, 2);
             priceInput.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             priceInput.Name = "priceInput";
-            priceInput.Size = new Size(131, 27);
+            priceInput.Size = new Size(115, 23);
             priceInput.TabIndex = 3;
             // 
             // nameProductInput
             // 
-            nameProductInput.Location = new Point(184, 22);
+            nameProductInput.Location = new Point(152, 56);
             nameProductInput.Margin = new Padding(3, 2, 3, 2);
             nameProductInput.Name = "nameProductInput";
-            nameProductInput.Size = new Size(110, 27);
+            nameProductInput.Size = new Size(97, 23);
             nameProductInput.TabIndex = 2;
             // 
             // priceLable
             // 
             priceLable.AutoSize = true;
-            priceLable.Location = new Point(342, 92);
+            priceLable.Location = new Point(290, 109);
             priceLable.Name = "priceLable";
-            priceLable.Size = new Size(41, 20);
+            priceLable.Size = new Size(33, 15);
             priceLable.TabIndex = 1;
             priceLable.Text = "מחיר";
             // 
             // nameProductLable
             // 
             nameProductLable.AutoSize = true;
-            nameProductLable.Location = new Point(323, 24);
+            nameProductLable.Location = new Point(274, 58);
             nameProductLable.Name = "nameProductLable";
-            nameProductLable.Size = new Size(66, 20);
+            nameProductLable.Size = new Size(52, 15);
             nameProductLable.TabIndex = 0;
             nameProductLable.Text = "שם מוצר";
             // 
@@ -237,21 +244,21 @@
             update.Controls.Add(nameProduct);
             update.Controls.Add(label3);
             update.Controls.Add(label4);
-            update.Location = new Point(4, 29);
+            update.Location = new Point(4, 24);
             update.Margin = new Padding(3, 2, 3, 2);
             update.Name = "update";
             update.Padding = new Padding(3, 2, 3, 2);
-            update.Size = new Size(438, 226);
+            update.Size = new Size(502, 258);
             update.TabIndex = 1;
             update.Text = "עדכון";
             update.UseVisualStyleBackColor = true;
             // 
             // searchBtn
             // 
-            searchBtn.Location = new Point(18, 9);
+            searchBtn.Location = new Point(21, 16);
             searchBtn.Margin = new Padding(2);
             searchBtn.Name = "searchBtn";
-            searchBtn.Size = new Size(74, 33);
+            searchBtn.Size = new Size(65, 25);
             searchBtn.TabIndex = 20;
             searchBtn.Text = "חפש";
             searchBtn.UseVisualStyleBackColor = true;
@@ -259,36 +266,36 @@
             // 
             // codeProductInput
             // 
-            codeProductInput.Location = new Point(127, 16);
+            codeProductInput.Location = new Point(149, 41);
             codeProductInput.Margin = new Padding(3, 2, 3, 2);
             codeProductInput.Name = "codeProductInput";
-            codeProductInput.Size = new Size(104, 27);
+            codeProductInput.Size = new Size(92, 23);
             codeProductInput.TabIndex = 19;
             codeProductInput.TextChanged += codeProductInput_TextChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(246, 20);
+            label5.Location = new Point(253, 44);
             label5.Name = "label5";
-            label5.Size = new Size(151, 20);
+            label5.Size = new Size(122, 15);
             label5.TabIndex = 18;
             label5.Text = "הכנס קוד מוצר לעידכון";
             // 
             // amount
             // 
-            amount.Location = new Point(151, 139);
+            amount.Location = new Point(151, 146);
             amount.Margin = new Padding(3, 2, 3, 2);
             amount.Name = "amount";
-            amount.Size = new Size(131, 27);
+            amount.Size = new Size(115, 23);
             amount.TabIndex = 17;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(329, 146);
+            label1.Location = new Point(309, 154);
             label1.Name = "label1";
-            label1.Size = new Size(42, 20);
+            label1.Size = new Size(34, 15);
             label1.TabIndex = 16;
             label1.Text = "כמות";
             // 
@@ -296,27 +303,27 @@
             // 
             categoryUpdate.FormattingEnabled = true;
             categoryUpdate.Items.AddRange(new object[] { "Necklaces ", "Bracelets", "Rings    ", "Earrings  ", "Watches      " });
-            categoryUpdate.Location = new Point(150, 81);
+            categoryUpdate.Location = new Point(149, 103);
             categoryUpdate.Margin = new Padding(3, 2, 3, 2);
             categoryUpdate.Name = "categoryUpdate";
-            categoryUpdate.Size = new Size(133, 28);
+            categoryUpdate.Size = new Size(117, 23);
             categoryUpdate.TabIndex = 15;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(315, 83);
+            label2.Location = new Point(297, 106);
             label2.Name = "label2";
-            label2.Size = new Size(62, 20);
+            label2.Size = new Size(49, 15);
             label2.TabIndex = 14;
             label2.Text = "קטגוריה";
             // 
             // updateBtn
             // 
-            updateBtn.Location = new Point(32, 154);
+            updateBtn.Location = new Point(217, 198);
             updateBtn.Margin = new Padding(3, 2, 3, 2);
             updateBtn.Name = "updateBtn";
-            updateBtn.Size = new Size(97, 26);
+            updateBtn.Size = new Size(85, 27);
             updateBtn.TabIndex = 13;
             updateBtn.Text = "עדכן";
             updateBtn.UseVisualStyleBackColor = true;
@@ -324,36 +331,36 @@
             // 
             // price
             // 
-            price.Location = new Point(150, 108);
+            price.Location = new Point(151, 122);
             price.Margin = new Padding(3, 2, 3, 2);
             price.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             price.Name = "price";
-            price.Size = new Size(131, 27);
+            price.Size = new Size(115, 23);
             price.TabIndex = 12;
             // 
             // nameProduct
             // 
-            nameProduct.Location = new Point(172, 48);
+            nameProduct.Location = new Point(169, 79);
             nameProduct.Margin = new Padding(3, 2, 3, 2);
             nameProduct.Name = "nameProduct";
-            nameProduct.Size = new Size(110, 27);
+            nameProduct.Size = new Size(97, 23);
             nameProduct.TabIndex = 11;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(330, 115);
+            label3.Location = new Point(310, 130);
             label3.Name = "label3";
-            label3.Size = new Size(41, 20);
+            label3.Size = new Size(33, 15);
             label3.TabIndex = 10;
             label3.Text = "מחיר";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(315, 47);
+            label4.Location = new Point(297, 79);
             label4.Name = "label4";
-            label4.Size = new Size(66, 20);
+            label4.Size = new Size(52, 15);
             label4.TabIndex = 9;
             label4.Text = "שם מוצר";
             // 
@@ -362,21 +369,21 @@
             delete.Controls.Add(deleteBtn);
             delete.Controls.Add(codeInputToDelete);
             delete.Controls.Add(codeProductToDelete);
-            delete.Location = new Point(4, 29);
+            delete.Location = new Point(4, 24);
             delete.Margin = new Padding(3, 2, 3, 2);
             delete.Name = "delete";
             delete.Padding = new Padding(3, 2, 3, 2);
-            delete.Size = new Size(438, 226);
+            delete.Size = new Size(502, 258);
             delete.TabIndex = 2;
             delete.Text = "מחיקה";
             delete.UseVisualStyleBackColor = true;
             // 
             // deleteBtn
             // 
-            deleteBtn.Location = new Point(52, 135);
+            deleteBtn.Location = new Point(196, 171);
             deleteBtn.Margin = new Padding(3, 2, 3, 2);
             deleteBtn.Name = "deleteBtn";
-            deleteBtn.Size = new Size(110, 34);
+            deleteBtn.Size = new Size(96, 26);
             deleteBtn.TabIndex = 2;
             deleteBtn.Text = "מחיקה";
             deleteBtn.UseVisualStyleBackColor = true;
@@ -384,18 +391,18 @@
             // 
             // codeInputToDelete
             // 
-            codeInputToDelete.Location = new Point(163, 62);
+            codeInputToDelete.Location = new Point(195, 79);
             codeInputToDelete.Margin = new Padding(3, 2, 3, 2);
             codeInputToDelete.Name = "codeInputToDelete";
-            codeInputToDelete.Size = new Size(110, 27);
+            codeInputToDelete.Size = new Size(97, 23);
             codeInputToDelete.TabIndex = 1;
             // 
             // codeProductToDelete
             // 
             codeProductToDelete.AutoSize = true;
-            codeProductToDelete.Location = new Point(152, 34);
+            codeProductToDelete.Location = new Point(185, 59);
             codeProductToDelete.Name = "codeProductToDelete";
-            codeProductToDelete.Size = new Size(157, 20);
+            codeProductToDelete.Size = new Size(125, 15);
             codeProductToDelete.TabIndex = 0;
             codeProductToDelete.Text = "הקש קוד מוצר למחיקה";
             // 
@@ -405,9 +412,10 @@
             detailProduct.Controls.Add(showDetailsProduct);
             detailProduct.Controls.Add(idProductSearch);
             detailProduct.Controls.Add(label10);
-            detailProduct.Location = new Point(4, 29);
+            detailProduct.Location = new Point(4, 24);
+            detailProduct.Margin = new Padding(3, 2, 3, 2);
             detailProduct.Name = "detailProduct";
-            detailProduct.Size = new Size(438, 226);
+            detailProduct.Size = new Size(502, 258);
             detailProduct.TabIndex = 3;
             detailProduct.Text = "פרטי מוצר";
             detailProduct.UseVisualStyleBackColor = true;
@@ -415,19 +423,20 @@
             // detailProductOne
             // 
             detailProductOne.FormattingEnabled = true;
-            detailProductOne.ItemHeight = 20;
-            detailProductOne.Location = new Point(86, 104);
+            detailProductOne.ItemHeight = 15;
+            detailProductOne.Location = new Point(113, 145);
+            detailProductOne.Margin = new Padding(3, 2, 3, 2);
             detailProductOne.Name = "detailProductOne";
             detailProductOne.RightToLeft = RightToLeft.No;
-            detailProductOne.Size = new Size(169, 84);
+            detailProductOne.Size = new Size(233, 79);
             detailProductOne.TabIndex = 9;
             // 
             // showDetailsProduct
             // 
-            showDetailsProduct.Location = new Point(110, 66);
+            showDetailsProduct.Location = new Point(188, 115);
             showDetailsProduct.Margin = new Padding(3, 2, 3, 2);
             showDetailsProduct.Name = "showDetailsProduct";
-            showDetailsProduct.Size = new Size(120, 32);
+            showDetailsProduct.Size = new Size(105, 24);
             showDetailsProduct.TabIndex = 8;
             showDetailsProduct.Text = "הצג פרטי מוצר";
             showDetailsProduct.UseVisualStyleBackColor = true;
@@ -435,32 +444,47 @@
             // 
             // idProductSearch
             // 
-            idProductSearch.Location = new Point(85, 20);
+            idProductSearch.Location = new Point(138, 45);
             idProductSearch.Margin = new Padding(3, 2, 3, 2);
             idProductSearch.Name = "idProductSearch";
-            idProductSearch.Size = new Size(110, 27);
+            idProductSearch.Size = new Size(97, 23);
             idProductSearch.TabIndex = 7;
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(213, 20);
+            label10.Location = new Point(241, 49);
             label10.Name = "label10";
-            label10.Size = new Size(103, 20);
+            label10.Size = new Size(83, 15);
             label10.TabIndex = 6;
             label10.Text = "הכנס קוד מוצר";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.ImageToStl_com_pandora_logo;
+            pictureBox1.Location = new Point(65, 51);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(226, 37);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 12;
+            pictureBox1.TabStop = false;
+            // 
             // ProductsMenu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(248, 234, 231);
+            ClientSize = new Size(873, 338);
+            Controls.Add(pictureBox1);
             Controls.Add(filterCategory);
             Controls.Add(label11);
             Controls.Add(productsList);
             Controls.Add(add);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "ProductsMenu";
             Text = "ProductsMenu";
+            WindowState = FormWindowState.Maximized;
             Load += ProductsMenu_Load;
             add.ResumeLayout(false);
             addCustomer.ResumeLayout(false);
@@ -475,6 +499,7 @@
             delete.PerformLayout();
             detailProduct.ResumeLayout(false);
             detailProduct.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -517,5 +542,6 @@
         private Button showDetailsProduct;
         private TextBox idProductSearch;
         private Label label10;
+        private PictureBox pictureBox1;
     }
 }

@@ -63,7 +63,17 @@ internal class ProductImplementation : IProduct
     public int Create(Product item)
     {
         List<Product> productList = Deserialize();
-        Product p = item with { productId = Config.codeProduct };
+        Product p;
+        if (item.productId == 0)
+        {
+             p= item with { productId = Config.codeProduct };
+
+        }
+        else
+        {
+            p = item with { productId = item.productId };
+
+        }
         if ((productList.FirstOrDefault(i => i.productId == item.productId)) != null)
             throw new DalAlreadyExistsIdException("this product already exists.");
         productList.Add(p);
