@@ -40,7 +40,7 @@
             // orderBtn
             // 
             orderBtn.Anchor = AnchorStyles.Top;
-            orderBtn.Location = new Point(175, 630);
+            orderBtn.Location = new Point(281, 630);
             orderBtn.Name = "orderBtn";
             orderBtn.Size = new Size(371, 107);
             orderBtn.TabIndex = 7;
@@ -52,7 +52,7 @@
             // 
             inputId.Anchor = AnchorStyles.Top;
             inputId.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            inputId.Location = new Point(214, 362);
+            inputId.Location = new Point(320, 362);
             inputId.Name = "inputId";
             inputId.Size = new Size(145, 39);
             inputId.TabIndex = 6;
@@ -62,7 +62,7 @@
             customerId.Anchor = AnchorStyles.Top;
             customerId.AutoSize = true;
             customerId.Font = new Font("Shantell Sans", 11.2499981F, FontStyle.Regular, GraphicsUnit.Point);
-            customerId.Location = new Point(366, 367);
+            customerId.Location = new Point(472, 367);
             customerId.Name = "customerId";
             customerId.Size = new Size(180, 33);
             customerId.TabIndex = 5;
@@ -72,7 +72,7 @@
             // 
             label1.Anchor = AnchorStyles.Top;
             label1.Font = new Font("Shantell Sans", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(258, 163);
+            label1.Location = new Point(364, 163);
             label1.Name = "label1";
             label1.Size = new Size(303, 52);
             label1.TabIndex = 4;
@@ -95,7 +95,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(248, 234, 231);
-            ClientSize = new Size(800, 725);
+            ClientSize = new Size(1012, 725);
             Controls.Add(pictureBox1);
             Controls.Add(orderBtn);
             Controls.Add(inputId);

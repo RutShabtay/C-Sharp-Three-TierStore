@@ -2,10 +2,8 @@
 using DO;
 using System.Reflection;
 using System.Xml.Linq;
-using System.Xml.Serialization;
 
 namespace Dal;
-
 
 internal class SaleImplementation : ISale
 {
@@ -65,7 +63,7 @@ internal class SaleImplementation : ISale
         List<Sale> saleList = Deserialize();
         if (item.SaleId == 0)
         {
-            item = item with { SaleId = Config.codeSale };
+            item = item with { SaleId = Config.CodeSale };
         }
         if ((saleList.FirstOrDefault(i => i.SaleId == item.SaleId)) != null)
             throw new DalAlreadyExistsIdException("this Sale already exists.");
@@ -73,7 +71,7 @@ internal class SaleImplementation : ISale
         saleList.Add(item);
         Serialize(saleList);
         string message = "Create a Sale Object.";
-        Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+        Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
 
         return item.SaleId;
 
@@ -86,7 +84,7 @@ internal class SaleImplementation : ISale
         if (s != null)
         {
             string message = "Read a Sale Object.";
-            Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+            Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
             return s;
         }
         throw new DalNotExistsIdException("this Sale isn't exists.");
@@ -99,7 +97,7 @@ internal class SaleImplementation : ISale
         if (c != null)
         {
             string message = "Read a Sale Object.";
-            Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+            Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
             return c;
 
         }
@@ -112,7 +110,7 @@ internal class SaleImplementation : ISale
         List<Sale>? saleList = Deserialize();
 
         string message = "ReadAll sale Objects.";
-        Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+        Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
 
         if (filter == null)
             return saleList;
@@ -130,7 +128,7 @@ internal class SaleImplementation : ISale
             Delete(c.SaleId);
             Create(item);
             string message = "Update a Sale Object.";
-            Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+            Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
             return;
         }
 
@@ -149,12 +147,11 @@ internal class SaleImplementation : ISale
                 saleList.Remove(s);
                 string message = "Delete a Sale Object.";
                 Serialize(saleList);
-                Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+                Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
 
                 return;
             }
         }
         throw new DalNotExistsIdException("this Sale isn't exists.");
     }
-
 }

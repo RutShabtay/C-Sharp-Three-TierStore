@@ -1,5 +1,4 @@
-﻿
-using DO;
+﻿using DO;
 using DalApi;
 using System.Reflection;
 namespace Dal;
@@ -14,10 +13,9 @@ internal class SaleImplementation:ISale
             throw new DalAlreadyExistsIdException("this Sale already exists.");
         DataSource.Sales.Add(item);
         string message = "Create a Sale Object.";
-        Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+        Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
 
         return item.SaleId;
-
     }
 
     public Sale? Read(int id)
@@ -27,7 +25,7 @@ internal class SaleImplementation:ISale
         if (c != null)
         {
             string message = "Read a Sale Object.";
-            Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+            Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
             return c;
         }
         throw new DalNotExistsIdException("this Sale isn't exists.");
@@ -40,7 +38,7 @@ internal class SaleImplementation:ISale
         if (c != null)
         {
             string message = "Read a Sale Object.";
-            Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+            Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
             return c;
 
         }
@@ -51,7 +49,7 @@ internal class SaleImplementation:ISale
     public List<Sale?> ReadAll(Func<Sale, bool>? filter = null)
     {
         string message = "ReadAll sale Objects.";
-        Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+        Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
 
         if (filter == null)
             return DataSource.Sales;
@@ -69,7 +67,7 @@ internal class SaleImplementation:ISale
             Delete(c.SaleId);
             Create(item);
             string message = "Update a Sale Object.";
-            Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+            Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
             return;
         }
 
@@ -85,12 +83,11 @@ internal class SaleImplementation:ISale
             {
                 DataSource.Sales.Remove(c);
                 string message = "Delete a Sale Object.";
-                Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+                Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
 
                 return;
             }
         }
         throw new DalNotExistsIdException("this Sale isn't exists.");
     }
-
 }

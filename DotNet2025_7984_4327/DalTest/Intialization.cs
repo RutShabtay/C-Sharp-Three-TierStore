@@ -1,5 +1,4 @@
-﻿
-using DO;
+﻿using DO;
 using DalApi;
 namespace DalTest;
 
@@ -9,7 +8,7 @@ public class Intialization
 {
     private static IDal? s_dal;
 
-    private static void createCustomers()
+    private static void CreateCustomers()
     {
         s_dal.Customer.Create(new Customer(328187985, "Reut", "Shderot 8", "0578211450"));
         s_dal.Customer.Create(new Customer(213456789, "Noa", "Herzl 10, Tel Aviv", "0541234567"));
@@ -29,7 +28,7 @@ public class Intialization
 
     }
 
-    private static void createProducts()
+    private static void CreateProducts()
     {
         // Necklaces
         s_dal.Product.Create(new Product(1, "GoldenGrace Necklace", Catagories.Necklaces, 250, 20));
@@ -58,7 +57,7 @@ public class Intialization
 
     }
 
-    private static void createSales()
+    private static void CreateSales()
     {
         s_dal.Sale.Create(new Sale(1, 2, 1, false, 100, new DateTime(2025, 5, 2), new DateTime(2025, 5, 12)));
         s_dal.Sale.Create(new Sale(2, 5, null, true, 95, new DateTime(2025, 5, 6), new DateTime(2025, 5, 16)));
@@ -90,9 +89,9 @@ public class Intialization
     public static void initialize()
     {
         s_dal = DalApi.Factory.Get;
-        createCustomers();
-        createProducts();
-        createSales();
+        CreateCustomers();
+        CreateProducts();
+        CreateSales();
     }
 
 }

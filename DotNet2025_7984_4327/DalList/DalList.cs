@@ -1,5 +1,4 @@
 ﻿using DalApi;
-
 namespace Dal;
 
 internal sealed class DalList:IDal

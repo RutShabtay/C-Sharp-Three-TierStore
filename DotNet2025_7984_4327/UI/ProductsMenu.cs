@@ -58,7 +58,7 @@ namespace UI
                 }
                 else
                 {
-                    productList = s_bl.IProduct.ReadAll(p => (int)p.catagory == catagory);
+                    productList = s_bl.IProduct.ReadAll(p => (int)p.Catagory == catagory);
                 }
                 if (productList.Count == 0)
                     productsList.Items.Add("No Products---😣");
@@ -93,10 +93,10 @@ namespace UI
             try
             {
                 Product p = new Product();
-                p.productName = nameProductInput.Text;
-                p.catagory = (Catagories)Enum.Parse(typeof(Catagories), categoryInput.Text);
-                p.quantityInStock = (int)amountInput.Value;
-                p.productPrice = int.Parse(priceInput.Text);
+                p.ProductName = nameProductInput.Text;
+                p.Catagory = (Catagories)Enum.Parse(typeof(Catagories), categoryInput.Text);
+                p.QuantityInStock = (int)amountInput.Value;
+                p.ProductPrice = int.Parse(priceInput.Text);
                 s_bl.IProduct.Create(p);
                 MessageBox.Show("המוצר נוסף בהצלחה !!!YAY🎉🎉🎉", "הצלחה", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 RefreshProductList();
@@ -138,10 +138,10 @@ namespace UI
                 else
                 {
                     Product p = s_bl.IProduct.Read(int.Parse(codeProductInput.Text));
-                    nameProduct.Text = p.productName;
-                    price.Value = (int)p.productPrice;
-                    amount.Value = (int)p.quantityInStock;
-                    categoryUpdate.SelectedIndex = (int)p.catagory;
+                    nameProduct.Text = p.ProductName;
+                    price.Value = (int)p.ProductPrice;
+                    amount.Value = (int)p.QuantityInStock;
+                    categoryUpdate.SelectedIndex = (int)p.Catagory;
 
                 }
             }
@@ -166,11 +166,11 @@ namespace UI
             {
                 Product p = new Product()
                 {
-                    productId = int.Parse(codeProductInput.Text),
-                    productName = nameProduct.Text,
-                    catagory = (BO.Catagories)Enum.Parse(typeof(BO.Catagories), categoryUpdate.Text),
-                    quantityInStock = (int)amount.Value,
-                    productPrice = int.Parse(price.Text)
+                    ProductId = int.Parse(codeProductInput.Text),
+                    ProductName = nameProduct.Text,
+                    Catagory = (BO.Catagories)Enum.Parse(typeof(BO.Catagories), categoryUpdate.Text),
+                    QuantityInStock = (int)amount.Value,
+                    ProductPrice = int.Parse(price.Text)
                 };
 
                 s_bl.IProduct.Update(p);
@@ -211,7 +211,7 @@ namespace UI
             catch (BlNotExistsIdException ex)
             {
 
-                MessageBox.Show("מצטערים 😣, הלקוח אינו קיים---" + ex.Message,
+                MessageBox.Show("מצטערים 😣, המוצר אינו קיים---" + ex.Message,
                                    "שגיאה", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
@@ -256,6 +256,11 @@ namespace UI
         }
 
         private void codeProductInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addCustomer_Click(object sender, EventArgs e)
         {
 
         }

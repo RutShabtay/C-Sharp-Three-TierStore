@@ -1,9 +1,8 @@
 ﻿namespace Dal;
 using DO;
-using DalFacade;
+
 static internal class DataSource
 {
-
     static internal class Config
     {
         internal const int beginningIndexSale = 0;
@@ -14,26 +13,24 @@ static internal class DataSource
         private static int prevIndexProduct = beginningIndexProduct;
         private static int prevIndexCustomer = beginningIndexCustomer;
 
-        static int getIndexSale()
+        static int GetIndexSale()
         {
 
             return prevIndexSale++;
 
         }
-        static int getIndexProduct()
+        static int GetIndexProduct()
         {
 
             return prevIndexProduct++;
 
         }
-        static int getIndexCustomer()
+        static int GetIndexCustomer()
         {
 
             return prevIndexCustomer++;
 
         }
-
-
     }
     static internal List<Product>? Products = new List<Product>();
     static internal List<Sale>? Sales = new List<Sale>();

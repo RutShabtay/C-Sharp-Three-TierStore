@@ -1,11 +1,6 @@
-﻿using DO;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
+
 
 
 namespace BO
@@ -16,10 +11,10 @@ namespace BO
         {
             return new DO.Customer
             {
-                customerId = boCustomer.customerId,
-                customerName = boCustomer.customerName,
-                customerAddress = boCustomer.customerAddress,
-                customerPhone = boCustomer.customerPhone,
+                CustomerId = boCustomer.CustomerId,
+                CustomerName = boCustomer.CustomerName,
+                CustomerAddress = boCustomer.CustomerAddress,
+                CustomerPhone = boCustomer.CustomerPhone,
             };
         }
 
@@ -27,10 +22,10 @@ namespace BO
         {
             return new BO.Customer
             {
-                customerId = doCustomer.customerId,
-                customerName = doCustomer.customerName,
-                customerAddress = doCustomer.customerAddress,
-                customerPhone = doCustomer.customerPhone,
+                CustomerId = doCustomer.CustomerId,
+                CustomerName = doCustomer.CustomerName,
+                CustomerAddress = doCustomer.CustomerAddress,
+                CustomerPhone = doCustomer.CustomerPhone,
             };
         }
 
@@ -38,11 +33,11 @@ namespace BO
         {
             return new DO.Product
             {
-                productId = boProduct.productId,
-                productName = boProduct.productName,
-                catagory = (DO.Catagories)boProduct.catagory,
-                productPrice = boProduct.productPrice,
-                quantityInStock = boProduct.quantityInStock,
+                ProductId = boProduct.ProductId,
+                ProductName = boProduct.ProductName,
+                Catagory = (DO.Catagories)boProduct.Catagory,
+                ProductPrice = boProduct.ProductPrice,
+                QuantityInStock = boProduct.QuantityInStock,
             };
         }
 
@@ -50,12 +45,12 @@ namespace BO
         {
             return new BO.Product
             {
-                productId = doProduct.productId,
-                productName = doProduct.productName,
-                catagory = (BO.Catagories)doProduct.catagory,
-                saleInProducts = new List<BO.SaleInProduct>(),
-                productPrice = doProduct.productPrice,
-                quantityInStock = doProduct.quantityInStock,
+                ProductId = doProduct.ProductId,
+                ProductName = doProduct.ProductName,
+                Catagory = (BO.Catagories) doProduct.Catagory,
+                SaleInProducts = new List<BO.SaleInProduct>(),
+                ProductPrice = doProduct.ProductPrice,
+                QuantityInStock = doProduct.QuantityInStock
             };
         }
 

@@ -31,7 +31,7 @@ public class program
         Console.WriteLine("Insert customerID: ");
         int customerId = int.Parse(Console.ReadLine());
         if (s_bl.ICustomer.IsExists(customerId))
-            Console.WriteLine("Hello " + s_bl.ICustomer.Read(customerId).customerName);
+            Console.WriteLine("Hello " + s_bl.ICustomer.Read(customerId).CustomerName);
         else
             Console.WriteLine("casual customer");
         Order order = new Order();

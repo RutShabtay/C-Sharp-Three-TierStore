@@ -9,23 +9,23 @@ namespace BO
 {
     public class Product
     {
-        public int productId { get; set; }
-        public string productName { get; set; }
-        public Catagories catagory { get; set; }
-        public double productPrice { get; set; }
-        public int quantityInStock { get; set; }
-        public List<SaleInProduct>? saleInProducts { get; set; }
+        public int ProductId { get; set; }
+        public string ProductName { get; set; }
+        public Catagories Catagory { get; set; }
+        public double ProductPrice { get; set; }
+        public int QuantityInStock { get; set; }
+        public List<SaleInProduct>? SaleInProducts { get; set; }
 
         public override string ToString() => this.ToStringProperty();
         public Product() { }
         public Product(int productId, string productName, Catagories catagory, double productPrice, int quantityInStock, List<SaleInProduct>? saleInProducts)
         {
-            this.productId = productId;
-            this.productName = productName;
-            this.catagory = catagory;
-            this.productPrice = productPrice;
-            this.quantityInStock = quantityInStock;
-            this.saleInProducts = saleInProducts;
+            ProductId = productId;
+            ProductName = productName;
+            Catagory = catagory;
+            ProductPrice = productPrice;
+            QuantityInStock = quantityInStock;
+            SaleInProducts = saleInProducts;
         }
     }
 }

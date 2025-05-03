@@ -2,16 +2,16 @@
 <Sale>
   <Sale>
     <SaleId>6</SaleId>
-    <SaleProductId>46</SaleProductId>
+    <SaleProductId>49</SaleProductId>
     <RequiredQuantityForDiscount>1</RequiredQuantityForDiscount>
-    <FinalPrice>1111111</FinalPrice>
+    <FinalPrice>11111</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
     <SaleStartDate>2025-04-09T00:00:00</SaleStartDate>
     <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
   </Sale>
   <Sale>
     <SaleId>7</SaleId>
-    <SaleProductId>33</SaleProductId>
+    <SaleProductId>43</SaleProductId>
     <RequiredQuantityForDiscount />
     <FinalPrice>220</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
@@ -20,7 +20,7 @@
   </Sale>
   <Sale>
     <SaleId>8</SaleId>
-    <SaleProductId>32</SaleProductId>
+    <SaleProductId>49</SaleProductId>
     <RequiredQuantityForDiscount>1</RequiredQuantityForDiscount>
     <FinalPrice>105</FinalPrice>
     <IsIntendedForAllCustomers>false</IsIntendedForAllCustomers>
@@ -29,7 +29,7 @@
   </Sale>
   <Sale>
     <SaleId>9</SaleId>
-    <SaleProductId>18</SaleProductId>
+    <SaleProductId>50</SaleProductId>
     <RequiredQuantityForDiscount>2</RequiredQuantityForDiscount>
     <FinalPrice>130</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
@@ -38,7 +38,7 @@
   </Sale>
   <Sale>
     <SaleId>10</SaleId>
-    <SaleProductId>20</SaleProductId>
+    <SaleProductId>52</SaleProductId>
     <RequiredQuantityForDiscount />
     <FinalPrice>85</FinalPrice>
     <IsIntendedForAllCustomers>false</IsIntendedForAllCustomers>
@@ -47,7 +47,7 @@
   </Sale>
   <Sale>
     <SaleId>11</SaleId>
-    <SaleProductId>22</SaleProductId>
+    <SaleProductId>54</SaleProductId>
     <RequiredQuantityForDiscount>3</RequiredQuantityForDiscount>
     <FinalPrice>160</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
@@ -56,7 +56,7 @@
   </Sale>
   <Sale>
     <SaleId>12</SaleId>
-    <SaleProductId>24</SaleProductId>
+    <SaleProductId>55</SaleProductId>
     <RequiredQuantityForDiscount>1</RequiredQuantityForDiscount>
     <FinalPrice>115</FinalPrice>
     <IsIntendedForAllCustomers>false</IsIntendedForAllCustomers>
@@ -65,16 +65,16 @@
   </Sale>
   <Sale>
     <SaleId>13</SaleId>
-    <SaleProductId>26</SaleProductId>
+    <SaleProductId>42</SaleProductId>
     <RequiredQuantityForDiscount />
     <FinalPrice>190</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
     <SaleStartDate>2025-06-02T00:00:00</SaleStartDate>
-    <SaleEndDate>2025-06-17T00:00:00</SaleEndDate>
+	  <SaleEndDate>2025-09-31T21:40:14.549</SaleEndDate>
   </Sale>
   <Sale>
     <SaleId>14</SaleId>
-    <SaleProductId>28</SaleProductId>
+    <SaleProductId>43</SaleProductId>
     <RequiredQuantityForDiscount>2</RequiredQuantityForDiscount>
     <FinalPrice>210</FinalPrice>
     <IsIntendedForAllCustomers>false</IsIntendedForAllCustomers>
@@ -83,15 +83,15 @@
   </Sale>
   <Sale>
     <SaleId>15</SaleId>
-    <SaleProductId>30</SaleProductId>
+    <SaleProductId>44</SaleProductId>
     <RequiredQuantityForDiscount />
     <FinalPrice>99</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
     <SaleStartDate>2025-04-09T00:00:00</SaleStartDate>
-    <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
+	  <SaleEndDate>2025-09-31T21:40:14.549</SaleEndDate>
   </Sale>
   <Sale>
-    <SaleId>16</SaleId>
+    <SaleId>44</SaleId>
     <SaleProductId>1</SaleProductId>
     <RequiredQuantityForDiscount>2</RequiredQuantityForDiscount>
     <FinalPrice>90</FinalPrice>
@@ -100,16 +100,16 @@
     <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
   </Sale>
   <Sale>
-    <SaleId>17</SaleId>
+    <SaleId>47</SaleId>
     <SaleProductId>3</SaleProductId>
     <RequiredQuantityForDiscount />
     <FinalPrice>180</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
     <SaleStartDate>2025-04-09T00:00:00</SaleStartDate>
-    <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
+	  <SaleEndDate>2025-09-31T21:40:14.549</SaleEndDate>
   </Sale>
   <Sale>
-    <SaleId>18</SaleId>
+    <SaleId>47</SaleId>
     <SaleProductId>4</SaleProductId>
     <RequiredQuantityForDiscount>1</RequiredQuantityForDiscount>
     <FinalPrice>110</FinalPrice>
@@ -118,8 +118,8 @@
     <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
   </Sale>
   <Sale>
-    <SaleId>19</SaleId>
-    <SaleProductId>7</SaleProductId>
+    <SaleId>57</SaleId>
+    <SaleProductId>57</SaleProductId>
     <RequiredQuantityForDiscount />
     <FinalPrice>75</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
@@ -127,16 +127,16 @@
     <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
   </Sale>
   <Sale>
-    <SaleId>20</SaleId>
+    <SaleId>49</SaleId>
     <SaleProductId>8</SaleProductId>
     <RequiredQuantityForDiscount>3</RequiredQuantityForDiscount>
     <FinalPrice>170</FinalPrice>
     <IsIntendedForAllCustomers>false</IsIntendedForAllCustomers>
     <SaleStartDate>2025-04-09T00:00:00</SaleStartDate>
-    <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
+	  <SaleEndDate>2025-09-31T21:40:14.549</SaleEndDate>
   </Sale>
   <Sale>
-    <SaleId>21</SaleId>
+    <SaleId>49</SaleId>
     <SaleProductId>11</SaleProductId>
     <RequiredQuantityForDiscount>2</RequiredQuantityForDiscount>
     <FinalPrice>145</FinalPrice>
@@ -145,7 +145,7 @@
     <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
   </Sale>
   <Sale>
-    <SaleId>22</SaleId>
+    <SaleId>51</SaleId>
     <SaleProductId>12</SaleProductId>
     <RequiredQuantityForDiscount />
     <FinalPrice>135</FinalPrice>
@@ -154,17 +154,17 @@
     <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
   </Sale>
   <Sale>
-    <SaleId>23</SaleId>
+    <SaleId>46</SaleId>
     <SaleProductId>14</SaleProductId>
     <RequiredQuantityForDiscount>1</RequiredQuantityForDiscount>
     <FinalPrice>155</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
     <SaleStartDate>2025-04-09T00:00:00</SaleStartDate>
-    <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
+	  <SaleEndDate>2025-09-31T21:40:14.549</SaleEndDate>
   </Sale>
   <Sale>
     <SaleId>24</SaleId>
-    <SaleProductId>17</SaleProductId>
+    <SaleProductId>57</SaleProductId>
     <RequiredQuantityForDiscount>2</RequiredQuantityForDiscount>
     <FinalPrice>125</FinalPrice>
     <IsIntendedForAllCustomers>false</IsIntendedForAllCustomers>
@@ -187,7 +187,7 @@
     <FinalPrice>100</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
     <SaleStartDate>2025-04-09T00:00:00</SaleStartDate>
-    <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
+	  <SaleEndDate>2025-11-31T21:40:14.549</SaleEndDate>
   </Sale>
   <Sale>
     <SaleId>30</SaleId>
@@ -196,7 +196,7 @@
     <FinalPrice>2</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
     <SaleStartDate>2025-04-09T00:00:00</SaleStartDate>
-    <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
+	  <SaleEndDate>2025-11-31T21:40:14.549</SaleEndDate>
   </Sale>
   <Sale>
     <SaleId>31</SaleId>
@@ -209,7 +209,7 @@
   </Sale>
   <Sale>
     <SaleId>32</SaleId>
-    <SaleProductId>2</SaleProductId>
+    <SaleProductId>57</SaleProductId>
     <RequiredQuantityForDiscount>2</RequiredQuantityForDiscount>
     <FinalPrice>100</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
@@ -218,75 +218,75 @@
   </Sale>
   <Sale>
     <SaleId>33</SaleId>
-    <SaleProductId>2</SaleProductId>
+    <SaleProductId>41</SaleProductId>
     <RequiredQuantityForDiscount>1</RequiredQuantityForDiscount>
     <FinalPrice>1</FinalPrice>
     <IsIntendedForAllCustomers>false</IsIntendedForAllCustomers>
     <SaleStartDate>2025-04-09T00:00:00</SaleStartDate>
-    <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
+	  <SaleEndDate>2025-11-31T21:40:14.549</SaleEndDate>
   </Sale>
   <Sale>
     <SaleId>34</SaleId>
-    <SaleProductId>5</SaleProductId>
+    <SaleProductId>43</SaleProductId>
     <RequiredQuantityForDiscount>1</RequiredQuantityForDiscount>
     <FinalPrice>1</FinalPrice>
     <IsIntendedForAllCustomers>false</IsIntendedForAllCustomers>
     <SaleStartDate>2025-04-09T00:00:00</SaleStartDate>
-    <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
+	  <SaleEndDate>2025-11-31T21:40:14.549</SaleEndDate>
   </Sale>
   <Sale>
     <SaleId>3</SaleId>
-    <SaleProductId>6</SaleProductId>
+    <SaleProductId>42</SaleProductId>
     <RequiredQuantityForDiscount>1</RequiredQuantityForDiscount>
     <FinalPrice>1</FinalPrice>
     <IsIntendedForAllCustomers>false</IsIntendedForAllCustomers>
     <SaleStartDate>2025-04-09T00:00:00</SaleStartDate>
-    <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
+	  <SaleEndDate>2025-11-31T21:40:14.549</SaleEndDate>
   </Sale>
   <Sale>
     <SaleId>5</SaleId>
-    <SaleProductId>10</SaleProductId>
+    <SaleProductId>56</SaleProductId>
     <RequiredQuantityForDiscount>5</RequiredQuantityForDiscount>
     <FinalPrice>100</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
     <SaleStartDate>2025-04-09T00:00:00</SaleStartDate>
-    <SaleEndDate>2025-06-30T00:00:00</SaleEndDate>
+	  <SaleEndDate>2025-10-31T21:40:14.549</SaleEndDate>
   </Sale>
   <Sale>
     <SaleId>36</SaleId>
-    <SaleProductId>32</SaleProductId>
+    <SaleProductId>43</SaleProductId>
     <RequiredQuantityForDiscount>1</RequiredQuantityForDiscount>
     <FinalPrice>2</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
     <SaleStartDate>2025-05-02T21:37:34.643</SaleStartDate>
-    <SaleEndDate>2025-05-13T21:37:34.637</SaleEndDate>
+	  <SaleEndDate>2025-10-31T21:40:14.549</SaleEndDate>
   </Sale>
   <Sale>
     <SaleId>37</SaleId>
-    <SaleProductId>32</SaleProductId>
+    <SaleProductId>42</SaleProductId>
     <RequiredQuantityForDiscount>2</RequiredQuantityForDiscount>
     <FinalPrice>2</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
     <SaleStartDate>2025-04-28T21:40:14.539</SaleStartDate>
-    <SaleEndDate>2025-05-31T21:40:14.549</SaleEndDate>
+    <SaleEndDate>2025-10-31T21:40:14.549</SaleEndDate>
   </Sale>
   <Sale>
     <SaleId>38</SaleId>
-    <SaleProductId>32</SaleProductId>
+    <SaleProductId>42</SaleProductId>
     <RequiredQuantityForDiscount>1</RequiredQuantityForDiscount>
     <FinalPrice>1888</FinalPrice>
     <IsIntendedForAllCustomers>false</IsIntendedForAllCustomers>
     <SaleStartDate>2025-04-27T21:41:52.221</SaleStartDate>
-    <SaleEndDate>2025-05-10T21:41:52.215</SaleEndDate>
+    <SaleEndDate>2025-10-10T21:41:52.215</SaleEndDate>
   </Sale>
   <Sale>
     <SaleId>39</SaleId>
-    <SaleProductId>32</SaleProductId>
+    <SaleProductId>56</SaleProductId>
     <RequiredQuantityForDiscount>1</RequiredQuantityForDiscount>
     <FinalPrice>1</FinalPrice>
     <IsIntendedForAllCustomers>true</IsIntendedForAllCustomers>
     <SaleStartDate>2025-04-27T21:42:35.37</SaleStartDate>
-    <SaleEndDate>2025-05-16T21:42:35.365</SaleEndDate>
+    <SaleEndDate>2025-10-16T21:42:35.365</SaleEndDate>
   </Sale>
   <Sale>
     <SaleId>41</SaleId>
@@ -295,6 +295,6 @@
     <FinalPrice>100</FinalPrice>
     <IsIntendedForAllCustomers>false</IsIntendedForAllCustomers>
     <SaleStartDate>2025-04-27T13:43:32</SaleStartDate>
-    <SaleEndDate>2025-05-21T13:43:32</SaleEndDate>
+    <SaleEndDate>2025-10-21T13:43:32</SaleEndDate>
   </Sale>
 </Sale>

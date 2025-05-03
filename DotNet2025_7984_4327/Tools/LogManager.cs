@@ -1,37 +1,36 @@
-﻿
-namespace Tools;
+﻿namespace Tools;
 using System.IO;
 
 public static class LogManager
 {
     private const string path = "Log";
 
-    public static string getCurrentDirectoryPath()
+    public static string GetCurrentDirectoryPath()
     {
         return $@"{Directory.GetCurrentDirectory()}/{path}/{DateTime.Now.ToString("yyyy-MM")}";
 
     }
 
 
-    public static string getCurrentFilePath()
+    public static string GetCurrentFilePath()
     {
-        return Path.Combine(getCurrentDirectoryPath(), $@"{DateTime.Now.ToString("yyyy-MM-dd")}.txt");
+        return Path.Combine(GetCurrentDirectoryPath(), $@"{DateTime.Now.ToString("yyyy-MM-dd")}.txt");
     }
 
-    public static void writeToLog(string projectName, string funcName, string message)
+    public static void WriteToLog(string projectName, string funcName, string message)
     {
         try
         {
-            if (Directory.Exists(getCurrentDirectoryPath()))
-                if (File.Exists(getCurrentFilePath()))
-                    File.AppendAllText(getCurrentFilePath(), $"{DateTime.Now}\t{projectName}\t.{funcName}:\t{message}");
+            if (Directory.Exists(GetCurrentDirectoryPath()))
+                if (File.Exists(GetCurrentFilePath()))
+                    File.AppendAllText(GetCurrentFilePath(), $"{DateTime.Now}\t{projectName}\t.{funcName}:\t{message}");
                 else
 
-                    File.WriteAllText(getCurrentFilePath(), $@"{DateTime.Now}");
+                    File.WriteAllText(GetCurrentFilePath(), $@"{DateTime.Now}");
             else
             {
-                Directory.CreateDirectory(getCurrentDirectoryPath());
-                File.WriteAllText(getCurrentFilePath(), $@"{DateTime.Now}");
+                Directory.CreateDirectory(GetCurrentDirectoryPath());
+                File.WriteAllText(GetCurrentFilePath(), $@"{DateTime.Now}");
             }
         }
         catch (Exception e)
@@ -44,7 +43,7 @@ public static class LogManager
 
     public static void DeleteOldDirectorys()
     {
-        foreach (var dir in Directory.GetDirectories(getCurrentDirectoryPath()))
+        foreach (var dir in Directory.GetDirectories(GetCurrentDirectoryPath()))
         {
             if (Directory.GetCreationTime(dir) < DateTime.Now.AddMonths(-2))
             {

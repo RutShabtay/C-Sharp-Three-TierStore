@@ -1,5 +1,4 @@
-﻿using System.Data.Common;
-using System.Xml.Linq;
+﻿using System.Xml.Linq;
 
 namespace Dal;
 internal static class Config
@@ -9,7 +8,7 @@ internal static class Config
     private const string SALE_CODE = "saleCode";
 
     private static XElement configXml = XElement.Load(FILE_PATH);
-    public static int codeProduct
+    public static int CodeProduct
     {
         get
         {
@@ -21,7 +20,7 @@ internal static class Config
         }
     }
 
-    public static int codeSale
+    public static int CodeSale
     {
         get
         {
@@ -32,7 +31,4 @@ internal static class Config
             return currentSaledCode;
         }
     }
-
-
-
 }

@@ -1,5 +1,4 @@
-﻿
-using DO;
+﻿using DO;
 using DalTest;
 using System.Runtime.CompilerServices;
 using DalApi;
@@ -18,16 +17,16 @@ public class program
         {
             case "customer":
                 ICrud<Customer> Customer = s_dal.Customer;
-                displayCrud(Customer, "customer");
+                DisplayCrud(Customer, "customer");
                 break;
             case "sale":
                 ICrud<Sale> Sale = s_dal.Sale;
-                displayCrud(Sale, "sale");
+                DisplayCrud(Sale, "sale");
 
                 break;
             case "product":
                 ICrud<Product> Product = s_dal.Product;
-                displayCrud(Product, "product");
+                DisplayCrud(Product, "product");
                 break;
             case "clearlog":
                 Tools.LogManager.DeleteOldDirectorys();
@@ -38,7 +37,7 @@ public class program
     }
 
 
-    private static void displayCrud<T>(ICrud<T> obj, string type)
+    private static void DisplayCrud<T>(ICrud<T> obj, string type)
     {
         int Id;
         Console.WriteLine("please,choose func to do: create/read/read All/update/delete/ for exit press EXIT");
@@ -51,15 +50,15 @@ public class program
                     switch (type.ToLower())
                     {
                         case "customer":
-                            Customer c = (Customer)createObject("customer");
+                            Customer c = (Customer)CreateObject("customer");
                             s_dal.Customer.Create(c);
                             break;
                         case "product":
-                            Product p = (Product)createObject("product");
+                            Product p = (Product)CreateObject("product");
                             s_dal.Product.Create(p);
                             break;
                         case "sale":
-                            Sale s = (Sale)createObject("sale");
+                            Sale s = (Sale)CreateObject("sale");
                             s_dal.Sale.Create(s);
 
                             break;
@@ -79,15 +78,15 @@ public class program
                     switch (type.ToLower())
                     {
                         case "customer":
-                            Customer c = (Customer)createObject("customer");
+                            Customer c = (Customer)CreateObject("customer");
                             s_dal.Customer.Update(c);
                             break;
                         case "product":
-                            Product p = (Product)createObject("product");
+                            Product p = (Product)CreateObject("product");
                             s_dal.Product.Update(p);
                             break;
                         case "sale":
-                            Sale s = (Sale)createObject("sale");
+                            Sale s = (Sale)CreateObject("sale");
                             s_dal.Sale.Update(s);
 
                             break;
@@ -110,7 +109,7 @@ public class program
 
     }
 
-    private static Object createObject(String kindOfObject)
+    private static Object CreateObject(String kindOfObject)
     {
         switch (kindOfObject.ToLower())
         {
@@ -152,20 +151,11 @@ public class program
                 break;
         }
         return null;
-
-
     }
 
     static void Main(string[] args)
     {
-
-        
-
-            Intialization.initialize();
-            DisplayMainMenue();
-
-        
+        Intialization.initialize();
+        DisplayMainMenue();
     }
-
-
 }

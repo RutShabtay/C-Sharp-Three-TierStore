@@ -1,5 +1,4 @@
 ﻿using DalApi;
-using System.Diagnostics;
 namespace Dal;
 
 public class DalXml : IDal
@@ -12,5 +11,4 @@ public class DalXml : IDal
     public IProduct Product => new ProductImplementation();
     public ICustomer Customer => new CustomerImplementation();
     public ISale Sale => new SaleImplementation();
-
 }

@@ -1,11 +1,6 @@
 ﻿using DalApi;
 using DO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace Dal;
@@ -64,34 +59,34 @@ internal class ProductImplementation : IProduct
     {
         List<Product> productList = Deserialize();
         Product p;
-        if (item.productId == 0)
+        if (item.ProductId == 0)
         {
-             p= item with { productId = Config.codeProduct };
+            p = item with { ProductId = Config.CodeProduct };
 
         }
         else
         {
-            p = item with { productId = item.productId };
+            p = item with { ProductId = item.ProductId };
 
         }
-        if ((productList.FirstOrDefault(i => i.productId == item.productId)) != null)
+        if ((productList.FirstOrDefault(i => i.ProductId == item.ProductId)) != null)
             throw new DalAlreadyExistsIdException("this product already exists.");
         productList.Add(p);
         Serialize(productList);
         string message = "Create Product Object.";
-        Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
-        return item.productId;
+        Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+        return item.ProductId;
     }
 
     public Product? Read(int id)
     {
 
-        Product c = Deserialize().FirstOrDefault(i => i.productId == id);
+        Product c = Deserialize().FirstOrDefault(i => i.ProductId == id);
 
         if (c != null)
         {
             string message = "Read Customer Object.";
-            Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+            Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
             return c;
         }
         throw new DalNotExistsIdException("this Product isn't exists.");
@@ -105,7 +100,7 @@ internal class ProductImplementation : IProduct
         if (p != null)
         {
             string message = "Read a Product Object.";
-            Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+            Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
             return p;
         }
 
@@ -117,7 +112,7 @@ internal class ProductImplementation : IProduct
         List<Product> productList = Deserialize();
 
         string message = "ReadAll Products Object.";
-        Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+        Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
 
         if (filter == null)
             return productList;
@@ -129,14 +124,14 @@ internal class ProductImplementation : IProduct
     public void Update(Product item)
     {
 
-        Product? c = Deserialize().FirstOrDefault(i => i.productId == item.productId);
+        Product? c = Deserialize().FirstOrDefault(i => i.ProductId == item.ProductId);
 
         if (c != null)
         {
-            Delete(c.productId);
+            Delete(c.ProductId);
             Create(item);
             string message = "Update a Product Object.";
-            Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+            Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
 
             return;
         }
@@ -149,19 +144,18 @@ internal class ProductImplementation : IProduct
     {
         List<Product> productList = Deserialize();
 
-        Product? p = productList.FirstOrDefault(i => i.productId == id);
+        Product? p = productList.FirstOrDefault(i => i.ProductId == id);
         {
             if (p != null)
             {
                 productList.Remove(p);
                 Serialize(productList);
                 string message = "Delete a Product Object.";
-                Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+                Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
 
                 return;
             }
         }
         throw new DalNotExistsIdException("this Product isn't exists.");
-
     }
 }

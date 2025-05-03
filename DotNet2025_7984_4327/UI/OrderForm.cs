@@ -29,7 +29,7 @@ namespace UI
                 else
                 {
                     BO.Customer? customer = s_bl.ICustomer.Read(CustomerId);
-                    helloName.Text = customer?.customerName;
+                    helloName.Text = customer?.CustomerName;
                 }
                 RefreshProductList();
                 RefreshProductInOrderList();
@@ -100,13 +100,13 @@ namespace UI
                 }
                 else
                 {
-                    productList = s_bl.IProduct.ReadAll(p => (int)p.catagory == catagory);
+                    productList = s_bl.IProduct.ReadAll(p => (int)p.Catagory == catagory);
                 }
                 if (productList.Count == 0)
                     listProduct.Items.Add("No Products---😣");
                 productList.ForEach(product =>
                 {
-                    product.saleInProducts = s_bl.IProduct.GetActiveSales(product.productId, order.IsPreferredCustomer);
+                    product.SaleInProducts = s_bl.IProduct.GetActiveSales(product.ProductId, order.IsPreferredCustomer);
 
                     string currProduct = product.ToString() + "------------------------";
                     var productLines = currProduct.Split("\n");
@@ -202,6 +202,7 @@ namespace UI
         {
             try
             {
+                codeProductInputTםDelete.Text = "";
                 if (codeProductInputTםDelete.Text == "")
                 {
                     MessageBox.Show("קוד מוצר שגוי, הזן שנית");
@@ -211,7 +212,6 @@ namespace UI
                 s_bl.IOrder.AddProductToOrder(order, prodIdToDelete, -1);
                 MessageBox.Show("המוצר הוסר מעגלת הקניות🚮");
                 sumOrder.Text = order.OrderTotalPrice.ToString();
-                codeProductInputTםDelete.Text = "";
                 RefreshProductInOrderList();
             }
             catch (BlNotExistsIdException ex)

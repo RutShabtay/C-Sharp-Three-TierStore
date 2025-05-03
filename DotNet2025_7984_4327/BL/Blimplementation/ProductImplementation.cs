@@ -29,7 +29,7 @@ namespace Blimplementation
             try
             {
                 BO.Product? product = _dal.Product.Read(id)?.ProductToBo();
-                product.saleInProducts = GetActiveSales(product.productId);
+                product.SaleInProducts = GetActiveSales(product.ProductId);
                 return product;
             }
             catch (Exception ex)
@@ -43,7 +43,7 @@ namespace Blimplementation
             try
             {
                 BO.Product? product = _dal.Product.Read(filter)?.ProductToBo();
-                product.saleInProducts = GetActiveSales(product.productId);
+                product.SaleInProducts = GetActiveSales(product.ProductId);
                 return product;
             }
             catch (Exception ex)
@@ -68,14 +68,15 @@ namespace Blimplementation
                 }
                 else
                 {
+
                     listBO = (from c in listDO
-                              let bo = c.ProductToBo()
-                              select bo).ToList();
+                              where filter(c)
+                              select c.ProductToBo()).ToList();
                 }
 
                 foreach (var product in listBO)
                 {
-                    product.saleInProducts = GetActiveSales(product.productId);
+                    product.SaleInProducts = GetActiveSales(product.ProductId);
                 }
 
                 return listBO;

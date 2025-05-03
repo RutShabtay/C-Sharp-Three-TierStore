@@ -30,7 +30,7 @@ namespace Blimplementation
             ProductInOrder? updateProduct = order.ProductsInOrder.Find(p => p.productId == productId);
             try
             {
-                if (product.quantityInStock < quantity)
+                if (product.QuantityInStock < quantity)
                     throw new BlInvalidQuantity("Out of stock 😣");
 
                 if (updateProduct != null)
@@ -45,8 +45,8 @@ namespace Blimplementation
                     }
                     updateProduct.quantityInOrder += quantity;
                     order.ProductsInOrder = order.ProductsInOrder.Select(p => p.productId == productId ? updateProduct : p).ToList();
-                    product.quantityInStock -= quantity;
-                    product.saleInProducts = SearchSaleForProduct(updateProduct, order.IsPreferredCustomer);
+                    product.QuantityInStock -= quantity;
+                    product.SaleInProducts = SearchSaleForProduct(updateProduct, order.IsPreferredCustomer);
                     _dal.Product.Update(product.ProductToDo());
                 }
                 else
@@ -56,8 +56,8 @@ namespace Blimplementation
                         throw new BlInvalidQuantity("Operation not possible. Add more of this quantity so that you can remove this quantity 😉");
                     }
 
-                    order.ProductsInOrder.Add(new ProductInOrder(product.productId, product.productName, product.productPrice, quantity, null, quantity * product.productPrice));
-                    ProductInOrder? updateProductInOrder = order.ProductsInOrder.Find(p => p.productId == product.productId);
+                    order.ProductsInOrder.Add(new ProductInOrder(product.ProductId, product.ProductName, product.ProductPrice, quantity, null, quantity * product.ProductPrice));
+                    ProductInOrder? updateProductInOrder = order.ProductsInOrder.Find(p => p.productId == product.ProductId);
 
                     updateProductInOrder.saleListPerProduct = SearchSaleForProduct(updateProductInOrder, order.IsPreferredCustomer);
 
@@ -83,7 +83,7 @@ namespace Blimplementation
 
                 if (product.saleListPerProduct == null)
                 {
-                    totalPrice = _dal.Product.Read(product.productId).productPrice * product.quantityInOrder;
+                    totalPrice = _dal.Product.Read(product.productId).ProductPrice * product.quantityInOrder;
                     product.finalPrice = totalPrice;
                     return;
                 }
@@ -129,7 +129,7 @@ namespace Blimplementation
             order.ProductsInOrder.ForEach(p =>
             {
                 BO.Product? productToUpdate = _dal.Product.Read(p.productId).ProductToBo();
-                productToUpdate.quantityInStock -= p.quantityInOrder;
+                productToUpdate.QuantityInStock -= p.quantityInOrder;
                 _dal.Product.Update(productToUpdate.ProductToDo());
             });
         }

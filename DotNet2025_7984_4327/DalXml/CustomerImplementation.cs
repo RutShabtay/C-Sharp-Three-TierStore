@@ -1,7 +1,6 @@
 ﻿namespace Dal;
 using DalApi;
 using DO;
-using System.Linq.Expressions;
 using System.Reflection;
 using System.Xml.Serialization;
 
@@ -61,25 +60,25 @@ internal class CustomerImplementation : ICustomer
     {
         List<Customer> customerList = Deserialize();
 
-        if ((customerList.FirstOrDefault(i => i.customerId == item.customerId)) != null)
+        if ((customerList.FirstOrDefault(i => i.CustomerId == item.CustomerId)) != null)
             throw new DalAlreadyExistsIdException("this customer already exists.");
         customerList.Add(item);
         Serialize(customerList);
         string message = "Create Customer Object.";
-        Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
-        return item.customerId;
+        Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+        return item.CustomerId;
 
     }
 
     public Customer? Read(int id)
     {
         List<Customer> customerList = Deserialize();
-        Customer? c = customerList.FirstOrDefault(i => i.customerId == id);
+        Customer? c = customerList.FirstOrDefault(i => i.CustomerId == id);
 
         if (c != null)
         {
             string message = "Read Customer Object.";
-            Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+            Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
             return c;
         }
 
@@ -94,7 +93,7 @@ internal class CustomerImplementation : ICustomer
         if (c != null)
         {
             string message = "Read Customer Object.";
-            Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+            Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
             return c;
         }
         throw new DalNotExistsIdException("this customer isn't exists.");
@@ -106,7 +105,7 @@ internal class CustomerImplementation : ICustomer
         List<Customer> customerList = Deserialize();
 
         string message = "ReadAll Customer Object.";
-        Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+        Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
 
         if (filter == null)
             return customerList;
@@ -118,14 +117,14 @@ internal class CustomerImplementation : ICustomer
     public void Update(Customer item)
     {
 
-        Customer c = Deserialize().FirstOrDefault(i => i.customerId == item.customerId);
+        Customer c = Deserialize().FirstOrDefault(i => i.CustomerId == item.CustomerId);
 
         if (c != null)
         {
-            Delete(c.customerId);
+            Delete(c.CustomerId);
             Create(item);
             string message = "Update a Customer Object.";
-            Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+            Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
             return;
         }
 
@@ -137,14 +136,14 @@ internal class CustomerImplementation : ICustomer
     {
         List<Customer> customerList = Deserialize();
 
-        Customer c = customerList.FirstOrDefault(i => i.customerId == id);
+        Customer c = customerList.FirstOrDefault(i => i.CustomerId == id);
         {
             if (c != null)
             {
                 customerList.Remove(c);
                 Serialize(customerList);
                 string message = "Delete Customer Object.";
-                Tools.LogManager.writeToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
+                Tools.LogManager.WriteToLog(MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name, message);
 
                 return;
             }

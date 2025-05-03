@@ -45,7 +45,7 @@ namespace UI
             try
             {
                 customersList.Items.Clear();
-                List<Customer?> customerList = s_bl.ICustomer.ReadAll(c => c.customerPhone.StartsWith(phone));
+                List<Customer?> customerList = s_bl.ICustomer.ReadAll(c => c.CustomerPhone.StartsWith(phone));
                 if (customerList.Count == 0)
                     customersList.Items.Add("No Customers---😣");
                 customerList.ForEach(customer =>
@@ -94,10 +94,10 @@ namespace UI
             try
             {
                 Customer c = new Customer();
-                c.customerId = int.Parse(CustomerIdInput.Text);
-                c.customerName = CustomerNameInput.Text;
-                c.customerAddress = CustomerAddressInput.Text;
-                c.customerPhone = CustomerTelInput.Text;
+                c.CustomerId = int.Parse(CustomerIdInput.Text);
+                c.CustomerName = CustomerNameInput.Text;
+                c.CustomerAddress = CustomerAddressInput.Text;
+                c.CustomerPhone = CustomerTelInput.Text;
                 s_bl.ICustomer.Create(c);
                 MessageBox.Show("הידד!!! הלקוח נוסף בהצלחה 😉: ");
                 RefreshCustomerList();
@@ -152,10 +152,10 @@ namespace UI
                 else
                 {
                     Customer c = s_bl.ICustomer.Read(int.Parse(codeCustomerInput.Text));
-                    nameCustomerUpdate.Text = c.customerName;
-                    idCustomerUpdate.Text = c.customerId.ToString();
-                    addressCustomerUpdate.Text = c.customerAddress;
-                    phoneCustomerUpdate.Text = c.customerPhone;
+                    nameCustomerUpdate.Text = c.CustomerName;
+                    idCustomerUpdate.Text = c.CustomerId.ToString();
+                    addressCustomerUpdate.Text = c.CustomerAddress;
+                    phoneCustomerUpdate.Text = c.CustomerPhone;
 
                 }
             }
@@ -179,10 +179,10 @@ namespace UI
             try
             {
                 Customer c = new Customer();
-                c.customerName = nameCustomerUpdate.Text;
-                c.customerAddress = addressCustomerUpdate.Text;
-                c.customerPhone = phoneCustomerUpdate.Text;
-                c.customerId = int.Parse(idCustomerUpdate.Text);
+                c.CustomerName = nameCustomerUpdate.Text;
+                c.CustomerAddress = addressCustomerUpdate.Text;
+                c.CustomerPhone = phoneCustomerUpdate.Text;
+                c.CustomerId = int.Parse(idCustomerUpdate.Text);
                 s_bl.ICustomer.Update(c);
                 //איפוס השדות
                 nameCustomerUpdate.Text = "";
@@ -214,6 +214,8 @@ namespace UI
             {
                 int custId = int.Parse(codeCustomerInputToDelete.Text);
                 s_bl.ICustomer.Delete(custId);
+                codeCustomerInputToDelete.Text = "";
+                MessageBox.Show("הלקוח נמחק בהצלחה!!!🎉🎉🎉");
                 RefreshCustomerList();
 
             }
